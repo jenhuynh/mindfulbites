@@ -1,12 +1,18 @@
-.nav {
-  a[class="active"] {
-    background-color: darkorange;
-    color: white;
-    text-decoration: none;
-  }
-
-  img {
-    max-height: 50px;
-    max-width: 50px;
-  }
+h1,
+p {
+  text-align: center;
+}
+.moodhistory-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.beachImg {
+  width: 100px;
+  height: 100px;
 }
