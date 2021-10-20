@@ -11,6 +11,12 @@ export const getTasks = (sub) =>
     { sub },
   );
 
+export const getMoods = (sub) =>
+  db.any(
+    "SELECT moodtable.* FROM moodtable LEFT JOIN users on user_id=users.id WHERE sub=$<sub> ORDER BY timestamp DESC",
+    { sub },
+  );
+
 export const addTask = (sub, name) =>
   db.one(
     `INSERT INTO tasks(user_id, name)
@@ -19,6 +25,13 @@ export const addTask = (sub, name) =>
     { sub, name },
   );
 
+// export const addMood = (sub, name) =>
+//   db.one(
+//     `INSERT INTO tasks(user_id, name)
+//       VALUES((SELECT id FROM users WHERE sub=$<sub>), $<name>)
+//       RETURNING *`,
+//     { sub, name },
+//   );
 export const addOrUpdateUser = (user) =>
   db.one(
     `INSERT INTO users(given_name, family_name, picture, email, sub)
