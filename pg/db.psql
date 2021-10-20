@@ -1,0 +1,58 @@
+ALTER TABLE users
+ADD COLUMN created_at timestamp
+
+ALTER TABLE users
+ADD COLUMN updated_at timestamp
+
+CREATE TYPE mood AS ENUM ('wonderful','great','meh','not great', 'awlful');
+
+CREATE TABLE moodtable (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    user_id int,
+    time time without time zone,
+    date date,
+    current_mood mood,
+    notes text,
+    photo varchar,
+    PRIMARY KEY(id),
+    CONSTRAINT fk_user_id
+        FOREIGN KEY(user_id) 
+            REFERENCES users(id)
+);
+
+ALTER TABLE moodtable 
+DROP COLUMN time; 
+
+ALTER TABLE moodtable 
+DROP COLUMN date; 
+
+ALTER TABLE moodtable 
+ADD COLUMN timestamp timestamp; 
+
+INSERT INTO moodtable (user_id, current_mood, notes, photo, timestamp) VALUES (2, 'great', 'Went on a walk at the beach', 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80', TIMESTAMP '2004-10-19 10:23:54');
+
+INSERT INTO moodtable (user_id, current_mood, notes, timestamp) VALUES (2, 'awlful', 'Spent all day debugging', TIMESTAMP '2021-01-15 1:12:25');
+
+CREATE TABLE resource (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    link varchar,
+    mood mood,
+    PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE result (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    mood_id int,
+    resource_id int,
+    quote text,
+    PRIMARY KEY(id),
+    CONSTRAINT fk_mood_id
+       FOREIGN KEY(mood_id)
+       REFERENCES moodtable(id),
+    CONSTRAINT fk_resource_id
+        FOREIGN KEY(resource_id)
+        REFERENCES resource(id)
+);
+SELECT moodtable.* FROM moodtable LEFT JOIN users on user_id=users.id WHERE sub='google-oauth2|109641596066391421561' ORDER BY timestamp DESC

@@ -4,9 +4,10 @@ import mime from "mime-types";
 import jwtCheck from "./jwtCheck.mjs";
 import taskRouter from "./taskRouter.mjs";
 import userRouter from "./userRouter.mjs";
+import moodRouter from "./moodRouter.mjs";
 
 const app = express();
-
+app.use("/api/moods", jwtCheck, moodRouter);
 app.use("/api/tasks", jwtCheck, taskRouter);
 app.use("/api/users", jwtCheck, userRouter);
 
