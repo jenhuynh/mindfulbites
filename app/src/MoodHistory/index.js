@@ -18,25 +18,41 @@ const MoodHistory = () => {
   }, [loading, loadMoods]);
 
   return loading ? null : (
-    <section>
-      <MoodList {...{ moodHistory }} />
-    </section>
+    <>
+      <h1>Mood History</h1>
+      <p>
+        View how you been feeling from the first day you entered your first
+        mood!
+      </p>
+      <section>
+        <MoodList {...{ moodHistory }} />
+      </section>
+    </>
   );
 };
 const MoodList = ({ moodHistory }) => (
-  <ul className={styles.list}>
-    {moodHistory.map(
-      ({ id, user_id, current_mood, notes, photo, timestamp }) => (
-        <li key={id}>
-          {user_id}
-          {current_mood}
-          {notes}
-          {photo}
-          {timestamp}
-        </li>
-      ),
-    )}
-  </ul>
+  <table className="moodhistory-table">
+    <tbody>
+      {moodHistory.map(
+        ({ id, user_id, current_mood, notes, photo, timestamp }) => (
+          <tr key={id}>
+            <td>Date: {timestamp}</td>
+            <td>{current_mood}</td>
+            <td>{notes}</td>
+            <td>
+              {photo ? (
+                <img
+                  src={photo}
+                  alt="image of the beach"
+                  className="beachImg"
+                />
+              ) : null}
+            </td>
+          </tr>
+        ),
+      )}
+    </tbody>
+  </table>
 );
 
 export default MoodHistory;
