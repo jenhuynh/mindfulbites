@@ -13,7 +13,7 @@ export const getTasks = (sub) =>
 
 export const getMoods = (sub) =>
   db.any(
-    "SELECT moodtable.* FROM moodtable LEFT JOIN users on user_id=users.id WHERE sub=$<sub> ORDER BY timestamp DESC",
+    "SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub=$<sub> ORDER BY timestamp DESC",
     { sub },
   );
 
