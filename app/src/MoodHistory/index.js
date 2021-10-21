@@ -2,7 +2,7 @@ import * as React from "react";
 
 import useApi from "../auth/useApi";
 
-import styles from "./styles.module.scss";
+// import styles from "./styles.module.scss";
 
 const MoodHistory = () => {
   const [moodHistory, setMoodHistory] = React.useState([]);
@@ -43,6 +43,7 @@ const MoodList = ({ moodHistory }) => (
               {photo ? (
                 <img
                   src={photo}
+                  aria-hidden
                   alt="image of the beach"
                   className="beachImg"
                 />
