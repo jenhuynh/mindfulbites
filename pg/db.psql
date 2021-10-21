@@ -6,7 +6,7 @@ ADD COLUMN updated_at timestamp
 
 CREATE TYPE mood AS ENUM ('wonderful','great','meh','not great', 'awlful');
 
-CREATE TABLE moodtable (
+CREATE TABLE moodrecord (
     id INT GENERATED ALWAYS AS IDENTITY,
     user_id int,
     time time without time zone,
@@ -20,18 +20,18 @@ CREATE TABLE moodtable (
             REFERENCES users(id)
 );
 
-ALTER TABLE moodtable 
+ALTER TABLE moodrecord 
 DROP COLUMN time; 
 
-ALTER TABLE moodtable 
+ALTER TABLE moodrecord
 DROP COLUMN date; 
 
-ALTER TABLE moodtable 
+ALTER TABLE moodrecord 
 ADD COLUMN timestamp timestamp; 
 
-INSERT INTO moodtable (user_id, current_mood, notes, photo, timestamp) VALUES (2, 'great', 'Went on a walk at the beach', 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80', TIMESTAMP '2004-10-19 10:23:54');
+INSERT INTO moodrecord (user_id, current_mood, notes, photo, timestamp) VALUES (2, 'great', 'Went on a walk at the beach', 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80', TIMESTAMP '2004-10-19 10:23:54');
 
-INSERT INTO moodtable (user_id, current_mood, notes, timestamp) VALUES (2, 'awlful', 'Spent all day debugging', TIMESTAMP '2021-01-15 1:12:25');
+INSERT INTO moodrecord (user_id, current_mood, notes, timestamp) VALUES (2, 'awlful', 'Spent all day debugging', TIMESTAMP '2021-01-15 1:12:25');
 
 CREATE TABLE resource (
     id INT GENERATED ALWAYS AS IDENTITY,
@@ -50,9 +50,10 @@ CREATE TABLE result (
     PRIMARY KEY(id),
     CONSTRAINT fk_mood_id
        FOREIGN KEY(mood_id)
-       REFERENCES moodtable(id),
+       REFERENCES moodrecord(id),
     CONSTRAINT fk_resource_id
         FOREIGN KEY(resource_id)
         REFERENCES resource(id)
 );
+
 SELECT moodtable.* FROM moodtable LEFT JOIN users on user_id=users.id WHERE sub='google-oauth2|109641596066391421561' ORDER BY timestamp DESC
