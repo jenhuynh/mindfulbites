@@ -2,9 +2,9 @@ import express from "express";
 import mime from "mime-types";
 
 import jwtCheck from "./jwtCheck.mjs";
+import moodRouter from "./moodRouter.mjs";
 import taskRouter from "./taskRouter.mjs";
 import userRouter from "./userRouter.mjs";
-import moodRouter from "./moodRouter.mjs";
 
 const app = express();
 app.use("/api/moods", jwtCheck, moodRouter);
