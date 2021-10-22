@@ -9,10 +9,10 @@ moodRouter.get("/", async (request, response) => {
   response.json(moods);
 });
 
-// moodRouter.use(express.json());
-// moodRouter.post("/", async (request, response) => {
-//   const task = await db.addTask(request.user.sub, request.body.name);
-//   response.status(201).json(task);
-// });
+moodRouter.use(express.json());
+moodRouter.post("/", async (request, response) => {
+  const mood = await db.addMood(request.user.sub, request.body.name);
+  response.status(201).json(mood);
+});
 
 export default moodRouter;
