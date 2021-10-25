@@ -69,3 +69,5 @@ INSERT INTO moodrecord(user_id, current_mood, notes, photo, timestamp)
 
       INSERT INTO moodrecord( user_id,current_mood, notes, photo, timestamp)
       VALUES((SELECT id FROM users WHERE sub='google-oauth2|109641596066391421561'), 'great','Went to Disneyland!',  'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/virtual-disneyland-rides-1586924120.jpg', TIMESTAMP '2021-05-09 8:32:15')
+
+ DELETE FROM moodrecord WHERE id =9;
