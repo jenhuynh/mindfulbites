@@ -13,7 +13,8 @@ const MoodHistory = () => {
     [apiClient],
   );
 
-  const addMood = (mood) => apiClient.addMood(mood).then(loadMoods);
+  const addMood = (current_mood, notes, photo, timestamp) =>
+    apiClient.addMood(current_mood, notes, photo, timestamp).then(loadMoods);
 
   React.useEffect(() => {
     !loading && loadMoods();
@@ -64,13 +65,14 @@ const MoodList = ({ moodHistory }) => (
 );
 
 const AddMood = ({ addMood }) => {
-  const [timestamp, setTimestamp] = React.useState("");
   const [current_mood, setCurrent_Mood] = React.useState("");
   const [notes, setNotes] = React.useState("");
   const [photo, setPhoto] = React.useState("");
+  const [timestamp, setTimestamp] = React.useState("");
 
   //making sure required input fields can be added
-  const canAdd = current_mood !== "" && timestamp !== "";
+  const canAdd =
+    current_mood !== "" && notes !== "" && photo !== "" && timestamp !== "";
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -102,14 +104,17 @@ const AddMood = ({ addMood }) => {
       <div>
         <label htmlFor="current_mood">Select your mood: </label>
 
-        <select name="current_mood" id="current_mood">
-          <option value="" onChange={(e) => setCurrent_Mood(e.target.value)}>
-            Please choose how you are feeling:
-          </option>
-          <option value={current_mood}>Great</option>
-          <option value={current_mood}>Meh</option>
-          <option value={current_mood}>Not Great</option>
-          <option value={current_mood}>Awlful</option>
+        <select
+          name="current_mood"
+          id="current_mood"
+          value={current_mood}
+          onChange={(e) => setCurrent_Mood(e.target.value)}
+        >
+          <option>Please choose how you are feeling:</option>
+          <option value="Great">Great</option>
+          <option value="Meh">Meh</option>
+          <option value="Not Great">Not Great</option>
+          <option value="Awlful">Awlful</option>
         </select>
       </div>
       <div>
@@ -132,8 +137,7 @@ const AddMood = ({ addMood }) => {
           onChange={(e) => setPhoto(e.target.value)}
         />
       </div>
-      {/* <button disabled={!canAdd}> */}
-      <button>Submit</button>
+      <button disabled={!canAdd}>Submit</button>
     </form>
   );
 };
