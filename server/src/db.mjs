@@ -25,7 +25,7 @@ export const addTask = (sub, name) =>
     { sub, name },
   );
 
-export const addMood = (sub, current_mood, notes, photo, timestamp) =>
+export const addMood = (sub, { current_mood, notes, photo, timestamp }) =>
   db.one(
     `INSERT INTO moodrecord( user_id, current_mood, notes, photo, timestamp)
       VALUES((SELECT id FROM users WHERE sub=$<sub>), $<current_mood>, $<notes>, $<photo>, $<timestamp>)
