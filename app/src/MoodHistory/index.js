@@ -13,8 +13,7 @@ const MoodHistory = () => {
     [apiClient],
   );
 
-  const addMood = (current_mood, notes, photo, timestamp) =>
-    apiClient.addMood(current_mood, notes, photo, timestamp).then(loadMoods);
+  const addMood = (mood) => apiClient.addMood(mood).then(loadMoods);
 
   React.useEffect(() => {
     !loading && loadMoods();
@@ -82,15 +81,14 @@ const AddMood = ({ addMood }) => {
       notes: notes,
       photo: photo,
     };
-    // console.log(newMood);
+    console.log("***");
+    console.log(newMood);
     if (canAdd) {
       addMood(newMood);
       setCurrent_Mood("");
     }
-    // console.log(newMood);
-    console.log(current_mood, timestamp, notes, photo);
   };
-
+  console.log(current_mood, timestamp, notes, photo);
   return (
     <form {...{ onSubmit }}>
       <div>
@@ -113,10 +111,11 @@ const AddMood = ({ addMood }) => {
           onChange={(e) => setCurrent_Mood(e.target.value)}
         >
           <option>Please choose how you are feeling:</option>
-          <option value="Great">Great</option>
-          <option value="Meh">Meh</option>
-          <option value="Not Great">Not Great</option>
-          <option value="Awlful">Awlful</option>
+          <option value="wonderful">wonderful</option>
+          <option value="great">great</option>
+          <option value="meh">meh</option>
+          <option value="not great">not great</option>
+          <option value="awlful">awlful</option>
         </select>
       </div>
       <div>
@@ -139,6 +138,7 @@ const AddMood = ({ addMood }) => {
           onChange={(e) => setPhoto(e.target.value)}
         />
       </div>
+      {/* <button disabled={!canAdd}> */}
       <button disabled={!canAdd}>Submit</button>
     </form>
   );
