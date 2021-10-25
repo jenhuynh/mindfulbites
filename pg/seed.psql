@@ -198,6 +198,13 @@ COPY public.moodrecord (id, user_id, current_mood, notes, photo, "timestamp") FR
 --
 
 COPY public.resource (id, link, mood) FROM stdin;
+1	https://www.youtube.com/watch?v=RqxVzWM8fLU	wonderful
+2	https://www.youtube.com/watch?v=FsurvAaRxRc	wonderful
+3	https://www.youtube.com/watch?v=AuU_YbJnA6U	great
+4	https://www.youtube.com/watch?v=ShL6YWRh7vE	great
+5	https://www.youtube.com/watch?v=2FGR-OspxsU	meh
+6	https://www.youtube.com/watch?v=476ksk-FfPQ	not great
+7	https://www.youtube.com/watch?v=z6X5oEIg6Ak	not great
 \.
 
 
@@ -243,7 +250,7 @@ SELECT pg_catalog.setval('public.moodrecord_id_seq', 19, true);
 -- Name: resource_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.resource_id_seq', 1, false);
+SELECT pg_catalog.setval('public.resource_id_seq', 7, true);
 
 
 --
@@ -264,7 +271,7 @@ SELECT pg_catalog.setval('public.tasks_id_seq', 6, true);
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.users_id_seq', 122, true);
+SELECT pg_catalog.setval('public.users_id_seq', 123, true);
 
 
 --
