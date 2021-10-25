@@ -82,13 +82,15 @@ const AddMood = ({ addMood }) => {
       notes: notes,
       photo: photo,
     };
-    console.log(newMood);
+    // console.log(newMood);
     if (canAdd) {
       addMood(newMood);
       setCurrent_Mood("");
     }
+    // console.log(newMood);
+    console.log(current_mood, timestamp, notes, photo);
   };
-  console.log(current_mood, timestamp, notes, photo);
+
   return (
     <form {...{ onSubmit }}>
       <div>
