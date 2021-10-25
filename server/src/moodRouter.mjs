@@ -12,8 +12,8 @@ moodRouter.get("/", async (request, response) => {
 moodRouter.use(express.json());
 moodRouter.post("/", async (request, response) => {
   const mood = await db.addMood(request.user.sub, request.body);
-  console.log(request.user.sub);
   console.log(request.body);
+  console.log(request.user.sub);
   response.status(201).json(mood);
 });
 
