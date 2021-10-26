@@ -74,4 +74,4 @@ INSERT INTO moodrecord(user_id, current_mood, notes, photo, timestamp)
 
  INSERT INTO resource (link, mood) VALUES ('https://www.youtube.com/watch?v=z6X5oEIg6Ak', 'not great');
 
-ALTER TYPE mood RENAME VALUE 'awlful' TO 'awful;
+ALTER TYPE mood RENAME VALUE 'awlful' TO 'awful';
