@@ -86,8 +86,8 @@ const Home = () => {
   return (
     <>
       <header className={styles.header}>
-        <h1>{process.env.REACT_APP_TITLE}</h1>
-        <p>{process.env.REACT_APP_SUBTITLE}</p>
+        {/* <h1>{process.env.REACT_APP_TITLE}</h1>
+        <p>{process.env.REACT_APP_SUBTITLE}</p> */}
       </header>
       {isAuthenticated ? <Tasks /> && <MoodHistory /> && <MoodResult /> : null}
     </>
