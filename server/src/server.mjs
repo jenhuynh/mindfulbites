@@ -7,6 +7,7 @@ import taskRouter from "./taskRouter.mjs";
 import userRouter from "./userRouter.mjs";
 
 const app = express();
+app.use("/api/moods/moodresult", jwtCheck, moodRouter);
 app.use("/api/moods", jwtCheck, moodRouter);
 app.use("/api/tasks", jwtCheck, taskRouter);
 app.use("/api/users", jwtCheck, userRouter);
