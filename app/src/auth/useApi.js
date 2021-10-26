@@ -7,6 +7,7 @@ const makeApi = (accessToken) => {
     getTasks: () => _get("/api/tasks"),
     getMoods: () => _get("/api/moods"),
     addTask: (name) => _post("/api/tasks", { name }),
+    addMood: (mood) => _post("/api/moods", mood),
     addOrUpdateUser: (user) => _post("/api/users", { user }),
   };
 
