@@ -11,9 +11,17 @@ export const getTasks = (sub) =>
     { sub },
   );
 
+//displays all moods of user mood history
 export const getMoods = (sub) =>
   db.any(
     "SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub=$<sub> ORDER BY timestamp DESC",
+    { sub },
+  );
+
+//displays single mood they selected for the day
+export const getMood = (sub) =>
+  db.any(
+    "SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub=$<sub> ORDER BY timestamp DESC LIMIT 1;",
     { sub },
   );
 
