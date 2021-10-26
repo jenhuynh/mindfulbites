@@ -75,3 +75,5 @@ INSERT INTO moodrecord(user_id, current_mood, notes, photo, timestamp)
  INSERT INTO resource (link, mood) VALUES ('https://www.youtube.com/watch?v=z6X5oEIg6Ak', 'not great');
 
 ALTER TYPE mood RENAME VALUE 'awlful' TO 'awful;
+
+SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub='google-oauth2|109641596066391421561 ORDER BY timestamp DESC LIMIT 1;
