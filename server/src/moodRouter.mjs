@@ -3,10 +3,16 @@ import express from "express";
 import * as db from "./db.mjs";
 
 const moodRouter = express.Router();
-console.log("hey inside mood router");
+
 moodRouter.get("/", async (request, response) => {
   const moods = await db.getMoods(request.user.sub);
   response.json(moods);
+});
+
+moodRouter.get("/moodresult", async (request, response) => {
+  const moodResult = await db.getMood(request.user.sub);
+  response.json(moodResult);
+  console.log(request.user.sub);
 });
 
 moodRouter.use(express.json());
