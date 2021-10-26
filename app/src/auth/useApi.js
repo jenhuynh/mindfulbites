@@ -6,6 +6,7 @@ const makeApi = (accessToken) => {
   const actions = {
     getTasks: () => _get("/api/tasks"),
     getMoods: () => _get("/api/moods"),
+    getMood: () => _get("/api/moods/moodresult"),
     addTask: (name) => _post("/api/tasks", { name }),
     addMood: (mood) => _post("/api/moods", mood),
     addOrUpdateUser: (user) => _post("/api/users", { user }),
