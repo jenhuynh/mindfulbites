@@ -25,13 +25,14 @@ export const addTask = (sub, name) =>
     { sub, name },
   );
 
-// export const addMood = (sub, name) =>
-//   db.one(
-//     `INSERT INTO tasks(user_id, name)
-//       VALUES((SELECT id FROM users WHERE sub=$<sub>), $<name>)
-//       RETURNING *`,
-//     { sub, name },
-//   );
+export const addMood = (sub, { current_mood, notes, photo, timestamp }) =>
+  db.one(
+    `INSERT INTO moodrecord( user_id, current_mood, notes, photo, timestamp)
+      VALUES((SELECT id FROM users WHERE sub=$<sub>), $<current_mood>, $<notes>, $<photo>, $<timestamp>)
+      RETURNING *`,
+    { sub, current_mood, notes, photo, timestamp },
+  );
+
 export const addOrUpdateUser = (user) =>
   db.one(
     `INSERT INTO users(given_name, family_name, picture, email, sub)
