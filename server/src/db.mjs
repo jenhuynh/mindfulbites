@@ -19,7 +19,7 @@ export const getMoods = (sub) =>
   );
 
 //displays single mood they selected for the day
-export const getMood = (sub) =>
+export const getLatestMood = (sub) =>
   db.any(
     "SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub=$<sub> ORDER BY timestamp DESC LIMIT 1;",
     { sub },
