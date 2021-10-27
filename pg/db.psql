@@ -78,6 +78,8 @@ ALTER TYPE mood RENAME VALUE 'awlful' TO 'awful;
 
 SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub='google-oauth2|109641596066391421561' ORDER BY timestamp DESC LIMIT 1;
 
+SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE user_id=2 ORDER BY timestamp DESC LIMIT 1
+
 SELECT resource.* FROM resource LEFT JOIN users on users.id=resource.id WHERE sub='google-oauth2|109641596066391421561';
 
 SELECT resource.* FROM resource LEFT JOIN moodrecord on moodrecord.user_id=resource.id WHERE sub='google-oauth2|109641596066391421561' ORDER BY timestamp DESC LIMIT 1;
