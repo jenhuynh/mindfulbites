@@ -30,13 +30,13 @@ const LatestMood = () => {
 
 const LatestMoodList = ({ latestMood }) => (
   <>
-    <p className={styles.table}>
+    <ul className={styles.table}>
       {latestMood.map(
         ({ id, user_id, current_mood, notes, photo, timestamp }) => (
-          <p key={id}>
-            <p>Date: {timestamp}</p>
-            <p>{current_mood}</p>
-            <p>{notes}</p>
+          <li key={id}>
+            <li>Date: {timestamp}</li>
+            <h3>You reported that you are feeling ... {current_mood}</h3>
+            <p>Notes: {notes}</p>
             <p>
               {photo ? (
                 <img
@@ -47,10 +47,10 @@ const LatestMoodList = ({ latestMood }) => (
                 />
               ) : null}
             </p>
-          </p>
+          </li>
         ),
       )}
-    </p>
+    </ul>
     <p>Based on how you are feeling, here's what we suggest</p>
   </>
 );
