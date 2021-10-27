@@ -51,7 +51,6 @@ const MoodResultList = ({ moodResult }) => (
         ),
       )}
     </p>
-    <p>Based on how you are feeling, here's what we suggest</p>
   </>
 );
 
