@@ -43,7 +43,7 @@ const MoodList = ({ moodHistory }) => (
       {moodHistory.map(
         ({ id, user_id, current_mood, notes, photo, timestamp }) => (
           <tr key={id}>
-            <td>Date: {timestamp}</td>
+            <td>Date Made: {timestamp}</td>
             <td>{current_mood}</td>
             <td>{notes}</td>
             <td>
