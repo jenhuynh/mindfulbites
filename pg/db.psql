@@ -76,4 +76,16 @@ INSERT INTO moodrecord(user_id, current_mood, notes, photo, timestamp)
 
 ALTER TYPE mood RENAME VALUE 'awlful' TO 'awful;
 
-SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub='google-oauth2|109641596066391421561 ORDER BY timestamp DESC LIMIT 1;
+SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub='google-oauth2|109641596066391421561' ORDER BY timestamp DESC LIMIT 1;
+
+SELECT resource.* FROM resource LEFT JOIN users on users.id=resource.id WHERE sub='google-oauth2|109641596066391421561';
+
+SELECT resource.* FROM resource LEFT JOIN moodrecord on moodrecord.user_id=resource.id WHERE sub='google-oauth2|109641596066391421561' ORDER BY timestamp DESC LIMIT 1;
+
+SELECT current_mood FROM moodrecord ORDER BY timestamp DESC LIMIT 1;
+//returns latest current mood: great;
+
+//get current mood to match mood from resource table
+SELECT current_mood FROM moodrecord LEFT JOIN resource on resource.mood= moodrecord.current_mood ORDER BY timestamp DESC LIMIT 1;
+
+INSERT INTO result (mood_id, resource_id, quote) VALUES (2, 8, 'It’s not the load that breaks you down, it’s the way you carry it. – Lou Holtz');
