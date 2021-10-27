@@ -20,18 +20,26 @@ export const getMoods = (sub) =>
 
 //displays single mood they selected for the day - working
 export const getLatestMood = (sub) =>
-  db.any(
+  db.one(
     "SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub=$<sub> ORDER BY timestamp DESC LIMIT 1;",
     { sub },
   );
 
 //display the resource based on users id and mood??
 //this query returns resource id 2 with mood wonderful
-export const getResource = (sub, { link, mood }) =>
-  db.any(
-    "SELECT resource.* FROM resource LEFT JOIN users on user_id=users.id WHERE sub=$<sub> ORDER BY timestamp DESC LIMIT 1;",
-    { sub, link, mood },
+export const getResource = ({ mood }) =>
+  db.one(
+    "SELECT * FROM resource WHERE mood=$<mood> ORDER BY RANDOM() LIMIT 1",
+    { mood },
   );
+
+export const getResourceById = ({ id }) =>
+  db.one("SELECT * FROM resource WHERE id=$<id> LIMIT 1", {
+    id,
+  });
+
+export const getResult = ({ mood_id }) =>
+  db.one("SELECT * FROM result WHERE mood_id=$<mood_id> LIMIT 1", { mood_id });
 
 //display all resources
 export const addTask = (sub, name) =>
@@ -51,6 +59,13 @@ export const addMood = (sub, { current_mood, notes, photo, timestamp }) =>
     { sub, current_mood, notes, photo, timestamp },
   );
 
+//when the user produces a mood, it should auto populate a video link and quote based on that moodß
+export const addResult = ({ mood_id, resource_id, quote }) =>
+  db.one(
+    `INSERT INTO result (mood_id, resource_id, quote) VALUES ($<mood_id>, $<resource_id>, $<quote>)
+    RETURNING *`,
+    { mood_id, resource_id, quote },
+  );
 //shows results from result table based on mood
 // export const addResult = (sub, {mood_id, resource_id, quote }) =>
 // db.one(`INSERT INTO resource ()`{})
