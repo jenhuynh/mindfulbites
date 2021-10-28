@@ -13,15 +13,27 @@ moodRouter.get("/latest", async (request, response) => {
   //getting mood from the database
   const latestMood = await db.getLatestMood(request.user.sub);
   console.log("=====");
-  console.log(latestMood);
+  // console.log(latestMood);
   //get result from the database that displays a quote
   const result = await db.getResult({ mood_id: latestMood.id });
-  console.log(result);
+  // console.log(result);
   //get resource from the database that display a link
   const resource = await db.getResourceById({ id: result.resource_id });
-  console.log(resource);
+  // console.log(resource);
+  const latestResult = {
+    mood: latestMood.current_mood,
+    notes: latestMood.notes,
+    photo: latestMood.photos,
+    result: {
+      quote: result.quote,
+      resource: {
+        link: resource.link,
+      },
+    },
+  };
+  console.log(latestResult);
   console.log("*****");
-  response.json(latestMood);
+  response.json(latestResult);
   console.log(request.user.sub);
 });
 
