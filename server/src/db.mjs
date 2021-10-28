@@ -25,19 +25,20 @@ export const getLatestMood = (sub) =>
     { sub },
   );
 
-//display the resource based on users id and mood??
-//this query returns resource id 2 with mood wonderful
+//when the user produces a mood, it should auto populate a video link and quote based on that mood
 export const getResource = ({ mood }) =>
   db.one(
     "SELECT * FROM resource WHERE mood=$<mood> ORDER BY RANDOM() LIMIT 1",
     { mood },
   );
 
+//get resource from database that displays a link
 export const getResourceById = ({ id }) =>
   db.one("SELECT * FROM resource WHERE id=$<id> LIMIT 1", {
     id,
   });
 
+//displays a quote
 export const getResult = ({ mood_id }) =>
   db.one("SELECT * FROM result WHERE mood_id=$<mood_id> LIMIT 1", { mood_id });
 
