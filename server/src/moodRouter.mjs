@@ -49,7 +49,8 @@ moodRouter.post("/", async (request, response) => {
     mood_id: mood.id,
     //use resource object to create a new result
     resource_id: resource.id,
-    quote: "Hello",
+    quote:
+      "Every day may not be good... but there's something good in every day.",
   });
   //end result we need to insert a new result into the result table
 
