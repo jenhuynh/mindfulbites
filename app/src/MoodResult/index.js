@@ -10,7 +10,7 @@ const MoodResult = () => {
   const { loading, apiClient } = useApi();
 
   const loadMoodResult = React.useCallback(
-    async () => setMoodResult(await apiClient.getMood()),
+    async () => setMoodResult(await apiClient.getMoods()),
     [apiClient],
   );
 
@@ -20,10 +20,10 @@ const MoodResult = () => {
 
   return loading ? null : (
     <>
-      <h1>Mood Results</h1>
+      {/* <h1>Mood Results</h1>
       <section>
         <MoodResultList {...{ moodResult }} />
-      </section>
+      </section> */}
     </>
   );
 };
@@ -31,6 +31,7 @@ const MoodResult = () => {
 const MoodResultList = ({ moodResult }) => (
   <>
     <p className={styles.table}>
+      <h2>Mood Result</h2>
       {moodResult.map(
         ({ id, user_id, current_mood, notes, photo, timestamp }) => (
           <p key={id}>
