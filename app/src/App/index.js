@@ -2,10 +2,11 @@ import * as React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
-import LatestMood from "../LatestMood";
+import LatestResult from "../LatestResult";
 import MoodHistory from "../MoodHistory";
+// import MoodResult from "../MoodResult";
 import Nav from "../Nav";
-import Tasks from "../Tasks";
+// import Tasks from "../Tasks";
 import useApi from "../auth/useApi";
 import useAuth0 from "../auth/useAuth0";
 import { Protected } from "../auth/widgets";
@@ -40,46 +41,6 @@ const App = () => {
   );
 };
 
-// const Home = () => {
-//   const { isLoading, isAuthenticated } = useAuth0();
-//   return (
-//     <>
-//       {/* <header className={styles.header}>
-//         <h1>{process.env.REACT_APP_TITLE}</h1>
-//         <p>{process.env.REACT_APP_SUBTITLE}</p>
-//       </header> */}
-//       {isLoading ? (
-//         <>
-//           <div>Loading ...</div>
-//         </>
-//       ) : !isAuthenticated ? (
-//         <div>
-//           <div className="hero-wrapper">
-//             <section className="text-wrapper">
-//               <h1 className="hero-text">Mood</h1>
-//               <h4 className="hero-subtext">Mood</h4>
-//               <h4 className="hero-subtext">
-//                 {/* Never forget - <i>you are worthy</i>. */}
-//               </h4>
-//             </section>
-//           </div>
-//         </div>
-//       ) : (
-//         <Dashboard />
-//       )}
-//     </>
-//   );
-// };
-// const Dashboard = () => {
-//   const { user } = useAuth0();
-//   console.log(user);
-//   return (
-//     <>
-//       <Tasks />
-//     </>
-//   );
-// };
-
 const Home = () => {
   const { isAuthenticated } = useAuth0();
 
@@ -89,7 +50,8 @@ const Home = () => {
         {/* <h1>{process.env.REACT_APP_TITLE}</h1>
         <p>{process.env.REACT_APP_SUBTITLE}</p> */}
       </header>
-      {/* {isAuthenticated ? <LatestMood /> : null} */}
+      {isAuthenticated ? <LatestResult /> : null}
+      {/* {isAuthenticated ? <MoodResult /> : null} */}
       {isAuthenticated ? <MoodHistory /> : null}
     </>
   );
