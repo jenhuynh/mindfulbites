@@ -23,7 +23,7 @@ moodRouter.get("/latest", async (request, response) => {
   const latestResult = {
     mood: latestMood.current_mood,
     notes: latestMood.notes,
-    photo: latestMood.photos,
+    photo: latestMood.photo,
     result: {
       quote: result.quote,
       resource: {
