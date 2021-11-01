@@ -2,7 +2,7 @@ import * as React from "react";
 
 import useApi from "../auth/useApi";
 
-// import styles from "./styles.module.scss";
+import styles from "./styles.module.scss";
 
 const MoodHistory = () => {
   const [moodHistory, setMoodHistory] = React.useState([]);
@@ -51,8 +51,8 @@ const MoodList = ({ moodHistory }) => (
                 <img
                   src={photo}
                   aria-hidden
-                  alt="image of the beach"
-                  className="beachImg"
+                  alt="latest image by user"
+                  className="latestImg"
                 />
               ) : null}
             </td>
@@ -70,8 +70,7 @@ const AddMood = ({ addMood }) => {
   const [timestamp, setTimestamp] = React.useState("");
 
   //making sure required input fields can be added
-  const canAdd =
-    current_mood !== "" && notes !== "" && photo !== "" && timestamp !== "";
+  const canAdd = current_mood !== "" && timestamp !== "";
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -115,7 +114,7 @@ const AddMood = ({ addMood }) => {
           <option value="great">great</option>
           <option value="meh">meh</option>
           <option value="not great">not great</option>
-          <option value="awlful">awlful</option>
+          <option value="awlful">awful</option>
         </select>
       </div>
       <div>
