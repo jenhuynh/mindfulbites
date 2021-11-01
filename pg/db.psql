@@ -31,7 +31,7 @@ ADD COLUMN timestamp timestamp;
 
 INSERT INTO moodrecord (user_id, current_mood, notes, photo, timestamp) VALUES (2, 'great', 'Went on a walk at the beach', 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80', TIMESTAMP '2004-10-19 10:23:54');
 
-INSERT INTO moodrecord (user_id, current_mood, notes, timestamp) VALUES (2, 'awlful', 'Spent all day debugging', TIMESTAMP '2021-01-15 1:12:25');
+INSERT INTO moodrecord (user_id, current_mood, notes, timestamp) VALUES (2, 'awful', 'Spent all day debugging some more', TIMESTAMP '2021-10-29 14:27:25');
 
 CREATE TABLE resource (
     id INT GENERATED ALWAYS AS IDENTITY,
@@ -72,6 +72,26 @@ INSERT INTO moodrecord(user_id, current_mood, notes, photo, timestamp)
 
  DELETE FROM moodrecord WHERE id =9;
 
- INSERT INTO resource (link, mood) VALUES ('https://www.youtube.com/watch?v=z6X5oEIg6Ak', 'not great');
+ INSERT INTO resource (link, mood) VALUES ('https://www.youtube.com/watch?v=1iqlJRF6TKQ', 'awful');
 
 ALTER TYPE mood RENAME VALUE 'awlful' TO 'awful;
+
+SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE sub='google-oauth2|109641596066391421561' ORDER BY timestamp DESC LIMIT 1;
+
+SELECT moodrecord.* FROM moodrecord LEFT JOIN users on user_id=users.id WHERE user_id=2 ORDER BY timestamp DESC LIMIT 1
+
+SELECT resource.* FROM resource LEFT JOIN users on users.id=resource.id WHERE sub='google-oauth2|109641596066391421561';
+
+SELECT resource.* FROM resource LEFT JOIN moodrecord on moodrecord.user_id=resource.id WHERE sub='google-oauth2|109641596066391421561' ORDER BY timestamp DESC LIMIT 1;
+
+SELECT current_mood FROM moodrecord ORDER BY timestamp DESC LIMIT 1;
+//returns latest current mood: great;
+
+//get current mood to match mood from resource table
+SELECT current_mood FROM moodrecord LEFT JOIN resource on resource.mood= moodrecord.current_mood ORDER BY timestamp DESC LIMIT 1;
+
+INSERT INTO result (mood_id, resource_id, quote) VALUES (2, 8, 'It’s not the load that breaks you down, it’s the way you carry it. – Lou Holtz');
+
+UPDATE resource 
+SET mood = 'https://www.youtube.com/embed/1iqlJRF6TKQ'
+WHERE id = 10;
