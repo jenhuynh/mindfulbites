@@ -37,6 +37,10 @@ moodRouter.get("/latest", async (request, response) => {
   console.log(request.user.sub);
 });
 
+// function called getQuote (take the mood and return a string)
+async function getQuote({ mood }) {
+  return "Every day may not be good... but there's something good in every day!";
+}
 //creation time
 moodRouter.use(express.json());
 moodRouter.post("/", async (request, response) => {
@@ -45,17 +49,13 @@ moodRouter.post("/", async (request, response) => {
   //when the user produces a mood, it should auto populate a video link and quote based on that mood
   const resource = await db.getResource({ mood: mood.current_mood });
   console.log(resource);
+  const quote = await getQuote({ mood: mood.current_mood });
   await db.addResult({
     mood_id: mood.id,
     //use resource object to create a new result
     resource_id: resource.id,
-    quote:
-      "Every day may not be good... but there's something good in every day.",
+    quote: quote,
   });
-  //end result we need to insert a new result into the result table
-
-  //find an appropriate resource object that has a correct mood (pick one at random) -- write a new method in db.mjs
-
   console.log(request.body);
   console.log(request.user.sub);
   response.status(201).json(mood);
