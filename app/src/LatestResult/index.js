@@ -7,8 +7,7 @@ import useApi from "../auth/useApi";
 import styles from "./styles.module.scss";
 
 const LatestResult = () => {
-  const [latestResult, setLatestResult] = React.useState([]);
-  const [latestMood, setLatestMood] = React.useState([]);
+  const [latestResult, setLatestResult] = React.useState(null);
   const { loading, apiClient } = useApi();
 
   const loadLatestResult = React.useCallback(
@@ -20,7 +19,7 @@ const LatestResult = () => {
     !loading && loadLatestResult();
   }, [loading, loadLatestResult]);
 
-  if (latestMood == null) {
+  if (latestResult == null) {
     return null;
   } else {
     return loading ? null : (
