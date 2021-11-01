@@ -27,14 +27,14 @@ const LatestResult = () => {
       <>
         <h1>Latest Result</h1>
         <section>
-          <LatestResultist {...{ latestResult }} />
+          <LatestResultDetail {...{ latestResult }} />
         </section>
       </>
     );
   }
 };
 
-const LatestResultist = ({ latestResult }) => (
+const LatestResultDetail = ({ latestResult }) => (
   <>
     <div>
       <ul>
@@ -46,8 +46,8 @@ const LatestResultist = ({ latestResult }) => (
       </ul>
 
       <h3>Based on how you are feeling, here's what we suggest</h3>
-      <div>
-        <iframe
+      {/* <div> */}
+      {/* <iframe
           title="meditation video"
           width="420"
           height="315"
@@ -57,7 +57,7 @@ const LatestResultist = ({ latestResult }) => (
       </div>
       <div>
         <p>Quote of the day: {latestResult.result.quote}</p>
-      </div>
+      </div> */}
     </div>
   </>
 );
