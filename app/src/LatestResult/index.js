@@ -39,15 +39,17 @@ const LatestResultDetail = ({ latestResult }) => (
     <div>
       <ul>
         <p>You are feeling ...{latestResult.mood}</p>
-        <p>Notes: {latestResult.notes}</p>
+        <p>{latestResult.notes ? <p>Notes: {latestResult.notes}</p> : null}</p>
         <p>
-          <img src={latestResult.photo} alt="latest by the user"></img>
+          {latestResult.photo ? (
+            <img src={latestResult.photo} alt="latest by the user" />
+          ) : null}
         </p>
       </ul>
 
       <h3>Based on how you are feeling, here's what we suggest</h3>
-      {/* <div> */}
-      {/* <iframe
+      <div>
+        <iframe
           title="meditation video"
           width="420"
           height="315"
@@ -57,7 +59,7 @@ const LatestResultDetail = ({ latestResult }) => (
       </div>
       <div>
         <p>Quote of the day: {latestResult.result.quote}</p>
-      </div> */}
+      </div>
     </div>
   </>
 );
