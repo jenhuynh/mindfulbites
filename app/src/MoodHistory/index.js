@@ -23,7 +23,6 @@ const MoodHistory = () => {
   return loading ? null : (
     <>
       <section>
-        <h1>MoodTracker in Moodhistory</h1>
         <AddMood {...{ addMood }} />
       </section>
       <h1>Mood History</h1>
