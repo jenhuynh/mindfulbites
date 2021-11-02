@@ -56,7 +56,7 @@ const AddMood = ({ addMood }) => {
             <option value="great">great</option>
             <option value="meh">meh</option>
             <option value="not great">not great</option>
-            <option value="awlful">awful</option>
+            <option value="awful">awful</option>
           </select>
         </div>
         <div>
