@@ -3,10 +3,10 @@ import * as React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import About from "../About";
+import AddMood from "../AddMood";
 import LatestResult from "../LatestResult";
+import Main from "../Main";
 import MoodHistory from "../MoodHistory";
-// import MoodResult from "../MoodResult";
-import Nav from "../Nav";
 // import Tasks from "../Tasks";
 import useApi from "../auth/useApi";
 import useAuth0 from "../auth/useAuth0";
@@ -24,20 +24,19 @@ const App = () => {
     }
   }, [isAuthenticated, user, loading, apiClient]);
 
+  const routes = (
+    <Routes>
+      {/* <Route path="/" element={<Home />} /> */}
+      <Route path="/" element={<AddMood />} />
+      <Route path="/latest" element={<LatestResult />} />
+      <Route path="/history" element={<MoodHistory />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+  );
   return (
     <>
-      <header>
-        <Nav />
-      </header>
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/dashboard"
-            element={<Protected component={Dashboard} />}
-          />
-        </Routes>
-      </main>
+      {/* if user is authenticated, show all the real routes, if not just show the main */}
+      <main>{isAuthenticated ? routes : <Main />}</main>
     </>
   );
 };
@@ -51,13 +50,12 @@ const Home = () => {
         {/* <h1>{process.env.REACT_APP_TITLE}</h1>
         <p>{process.env.REACT_APP_SUBTITLE}</p> */}
       </header>
+      {isAuthenticated ? <AddMood /> : null}
       {isAuthenticated ? <LatestResult /> : null}
       {isAuthenticated ? <MoodHistory /> : null}
       {isAuthenticated ? <About /> : null}
     </>
   );
 };
-
-const Dashboard = () => <h1>Dashboard</h1>;
 
 export default App;
