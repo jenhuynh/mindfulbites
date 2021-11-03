@@ -1,6 +1,7 @@
 .nav {
   a[class="active"] {
-    background-color: darkorange;
+    // background-color: darkorange;
+    display: none;
     color: white;
     text-decoration: none;
   }
