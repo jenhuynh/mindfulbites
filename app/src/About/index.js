@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import Nav from "../Nav";
 import useApi from "../auth/useApi";
 
 import styles from "./styles.module.scss";
@@ -7,6 +8,7 @@ import styles from "./styles.module.scss";
 const About = () => {
   return (
     <>
+      <Nav />
       <h1>About</h1>
       <h3>Why track your mood?</h3>
       <ul>
