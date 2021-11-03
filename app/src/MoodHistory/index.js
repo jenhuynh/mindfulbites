@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import AddMood from "../AddMood";
+import Nav from "../Nav";
 import useApi from "../auth/useApi";
 
 import styles from "./styles.module.scss";
@@ -14,17 +14,13 @@ const MoodHistory = () => {
     [apiClient],
   );
 
-  const addMood = (mood) => apiClient.addMood(mood).then(loadMoods);
-
   React.useEffect(() => {
     !loading && loadMoods();
   }, [loading, loadMoods]);
 
   return loading ? null : (
     <>
-      <section>
-        <AddMood {...{ addMood }} />
-      </section>
+      <Nav />
       <h1>Mood History</h1>
       <p>
         View how you been feeling from the first day you entered your first
