@@ -1,0 +1,21 @@
+.form{
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #557ee4;
+    padding: 15px;
+    height: 50%;
+    width: 50%;
+    border-radius: 20px;
+        box-shadow: 0 8px 6px -6px #000;
+} 
+input, select {
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 60%;
+    margin: 15px;
+    border: 1px solid #f7a440;
+    border-radius: 4px;
+    resize: vertical;
+    padding: 10px;
+}
