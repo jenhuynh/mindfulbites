@@ -1,12 +1,20 @@
 import * as React from "react";
 
+import { useNavigate, Link } from "react-router-dom";
+
+import useApi from "../auth/useApi";
+
 import styles from "./styles.module.scss";
 
-const AddMood = ({ addMood }) => {
+const AddMood = () => {
   const [current_mood, setCurrent_Mood] = React.useState("");
   const [notes, setNotes] = React.useState("");
   const [photo, setPhoto] = React.useState("");
   const [timestamp, setTimestamp] = React.useState("");
+  const navigate = useNavigate();
+  const { apiClient } = useApi();
+  const addMood = (mood) =>
+    apiClient.addMood(mood).then(() => navigate("/latest"));
 
   //making sure required input fields can be added
   const canAdd = current_mood !== "" && timestamp !== "";
@@ -80,6 +88,7 @@ const AddMood = ({ addMood }) => {
             />
           </div>
           <button disabled={!canAdd}>Submit</button>
+          <Link to="/history">Cancel</Link>
         </form>
       </div>
     </>
