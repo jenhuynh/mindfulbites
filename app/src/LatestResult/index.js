@@ -1,6 +1,8 @@
 import * as React from "react";
 
 // import MoodResult from "../MoodResult";
+import { Link } from "react-router-dom";
+
 import useApi from "../auth/useApi";
 
 import styles from "./styles.module.scss";
@@ -58,6 +60,7 @@ const LatestResultDetail = ({ latestResult }) => (
       <div>
         <p>Quote of the day: {latestResult.result.quote}</p>
       </div>
+      <Link to="/history">Done</Link>
     </div>
   </>
 );
