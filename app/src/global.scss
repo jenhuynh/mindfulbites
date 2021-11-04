@@ -8,13 +8,20 @@
 }
 
 body {
-  font-family: "system";
+  font-family: 'Marcellus', serif, 'Open Sans', sans-serif;
+  // background-image: url("https://images.pexels.com/photos/1924867/pexels-photo-1924867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  // background-image: url('https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-color: #112031;
+  margin: 0px;
 }
 
 html {
   box-sizing: border-box;
 }
-
+button.moodBtn{
+  display: block;
+  padding: 10px;
+}
 *,
 *:before,
 *:after {
@@ -22,6 +29,9 @@ html {
 }
 
 h1 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin: 1.5rem 0 0.5rem;
+}
+nav{
+  margin-left: 70%;
 }
