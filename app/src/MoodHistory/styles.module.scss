@@ -1,14 +1,43 @@
-.moodhistory-table {
-  margin-left: auto;
-  margin-right: auto;
+.historyh1{
+  font-size: 3em;
 }
-table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
+.historyp{
+  font-size: 1.5em;
 }
-.beachImg {
+.historyh1, .historyp {
+  text-align: center;
+  text-decoration: none;
+  color: #87AAAA;
+}
+td, tr{
+  display: block;
+  width: 100%;
+}
+tr{
+  margin-left: 25%;
+}
+.latestImg {
   width: 100px;
   height: 100px;
+}
+.moodhistorytable {
+border: 3px solid rgba(212, 236, 221, 0.2);
+background-color: rgba(212, 236, 221, 0.2);
+border-radius: 20px;
+width: 60%;
+color: #fff;
+margin-left: auto;
+margin-right: auto;
+}
+.historytimestamp{
+  text-decoration: underline;
+  padding: 10px;
+}
+.historyresults {
+  display: block;
+  border-radius: 5px;
+  background: rgba(254, 254, 254, 0.4);
+  // border: 3px solid rgba(231, 231, 231);
+  width: 50%;
+  text-align: center;
 }

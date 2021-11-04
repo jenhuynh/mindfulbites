@@ -21,8 +21,8 @@ const MoodHistory = () => {
   return loading ? null : (
     <>
       <Nav />
-      <h1>Mood History</h1>
-      <p>
+      <h1 className={styles.historyh1}>Mood History</h1>
+      <p className={styles.historyp}>
         View how you been feeling from the first day you entered your first
         mood!
       </p>
@@ -33,24 +33,26 @@ const MoodHistory = () => {
   );
 };
 const MoodList = ({ moodHistory }) => (
-  <table className="moodhistory-table">
-    <tbody>
+  <table className={styles.moodhistorytable}>
+    <tbody className={styles.moodhistorycontent}>
       {moodHistory.map(
         ({ id, user_id, current_mood, notes, photo, timestamp }) => (
           <tr key={id}>
-            <td>Date Made: {timestamp}</td>
-            <td>{current_mood}</td>
-            <td>{notes}</td>
-            <td>
-              {photo ? (
-                <img
-                  src={photo}
-                  aria-hidden
-                  alt="latest image by user"
-                  className="latestImg"
-                />
-              ) : null}
-            </td>
+            <td className={styles.historytimestamp}> {timestamp}</td>
+            <div className={styles.historyresults}>
+              <td>{current_mood}</td>
+              <td>{notes}</td>
+              <td>
+                {photo ? (
+                  <img
+                    src={photo}
+                    aria-hidden
+                    alt="latest image by user"
+                    className="latestImg"
+                  />
+                ) : null}
+              </td>
+            </div>
           </tr>
         ),
       )}
