@@ -37,59 +37,123 @@ const AddMood = () => {
   console.log(current_mood, timestamp, notes, photo);
   return (
     <>
-      <div className={styles.form}>
+      <div className={styles.addmoodbody}>
         <h3>How are you feeling today?</h3>
-        <form {...{ onSubmit }}>
-          <div>
-            <label htmlFor="timestamp"> </label>
-            <input
-              id="timestamp"
-              type="datetime-local"
-              name="timestamp"
-              value={timestamp}
-              onChange={(e) => setTimestamp(e.target.value)}
-            />
-          </div>
-          <div>
-            <label htmlFor="current_mood">Select your mood: </label>
-
-            <select
+        <div className={styles.form}>
+          <form {...{ onSubmit }}>
+            <div>
+              <label htmlFor="timestamp">Timestamp | Date </label>
+              <input
+                id="timestamp"
+                type="datetime-local"
+                name="timestamp"
+                value={timestamp}
+                onChange={(e) => setTimestamp(e.target.value)}
+              />
+            </div>
+            {/* ///does not work//// */}
+            {/* {/* <div>
+              <label htmlFor="current_mood">Select your mood </label>
+             /*} */}
+            <p>Choose your mood:</p>
+            <form
+              className={styles.moodbtn}
               name="current_mood"
               id="current_mood"
               value={current_mood}
               onChange={(e) => setCurrent_Mood(e.target.value)}
             >
-              <option>Please choose how you are feeling:</option>
-              <option value="wonderful">wonderful</option>
-              <option value="great">great</option>
-              <option value="meh">meh</option>
-              <option value="not great">not great</option>
-              <option value="awful">awful</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="notes">Add a Note:</label>
-            <input
-              id="notes"
-              type="text"
-              name="notes"
-              value={notes}
-              onChange={(e) => setNotes(e.target.value)}
-            />
-          </div>
-          <div>
-            <label htmlFor="photo">Add a Photo:</label>
-            <input
-              id="photo"
-              type="text"
-              name="photo"
-              value={photo}
-              onChange={(e) => setPhoto(e.target.value)}
-            />
-          </div>
-          <button disabled={!canAdd}>Submit</button>
-          <Link to="/history">Cancel</Link>
-        </form>
+              <button className={styles.moodbtn1}>
+                <input
+                  type="radio"
+                  id="wonderful"
+                  name="current_mood"
+                  value="wonderful"
+                />
+                <label htmlFor="wonderful" className="moodmenu">
+                  Wonderful
+                </label>
+              </button>
+              <button className={styles.moodbtn2}>
+                <input
+                  type="radio"
+                  id="great"
+                  name="current_mood"
+                  value="great"
+                />
+                <label htmlFor="great">Great</label>
+              </button>
+              <button className={styles.moodbtn3}>
+                <input type="radio" id="meh" name="current_mood" value="meh" />
+                <label htmlFor="meh">Meh</label>
+              </button>
+              <button className={styles.moodbtn4}>
+                <input
+                  type="radio"
+                  id="great"
+                  name="current_mood"
+                  value="not great"
+                />
+                <label htmlFor="not great">Not Great</label>
+              </button>
+              <button className={styles.moodbtn5}>
+                <input
+                  type="radio"
+                  id="awful"
+                  name="current_mood"
+                  value="awful"
+                />
+                <label htmlFor="awful">Awful</label>
+              </button>
+            </form>
+            {/* ////working select form///// */}
+            {/* <div>
+              <label htmlFor="current_mood">Select your mood </label>
+              <select
+                name="current_mood"
+                id="current_mood"
+                value={current_mood}
+                onChange={(e) => setCurrent_Mood(e.target.value)}
+              >
+                <option className="optionBtn">
+                  Please choose how you are feeling:
+                </option>
+                <option value="wonderful">wonderful</option>
+                <option value="great">great</option>
+                <option value="meh">meh</option>
+                <option value="not great">not great</option>
+                <option value="awful">awful</option>
+              </select>
+            </div> */}
+            <div>
+              <label htmlFor="notes">Notes</label>
+              <input
+                id="notes"
+                type="text"
+                name="notes"
+                value={notes}
+                onChange={(e) => setNotes(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="photo">Photos</label>
+              <input
+                id="photo"
+                type="text"
+                name="photo"
+                value={photo}
+                onChange={(e) => setPhoto(e.target.value)}
+              />
+            </div>
+
+            <button className={styles.addmoodtbtn} disabled={!canAdd}>
+              Submit
+            </button>
+            <Link to="/history" className={styles.cancelbtn}>
+              Cancel
+            </Link>
+          </form>
+        </div>
       </div>
     </>
   );
