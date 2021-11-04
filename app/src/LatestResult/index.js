@@ -25,7 +25,6 @@ const LatestResult = () => {
   } else {
     return loading ? null : (
       <>
-        <h1>Latest Result</h1>
         <section>
           <LatestResultDetail {...{ latestResult }} />
         </section>
@@ -38,7 +37,9 @@ const LatestResultDetail = ({ latestResult }) => (
   <>
     <div>
       <ul>
-        <p>You are feeling ...{latestResult.mood}</p>
+        <p className={styles.resultSentence}>
+          You are feeling ...{latestResult.mood}
+        </p>
         <p>{latestResult.notes ? <p>Notes: {latestResult.notes}</p> : null}</p>
         <p>
           {latestResult.photo ? (
@@ -46,19 +47,25 @@ const LatestResultDetail = ({ latestResult }) => (
           ) : null}
         </p>
       </ul>
-
-      <h3>Based on how you are feeling, here's what we suggest</h3>
-      <div>
-        <iframe
-          title="meditation video"
-          width="420"
-          height="315"
-          src={latestResult.result.resource.link}
-          frameborder="0"
-        ></iframe>
-      </div>
-      <div>
-        <p>Quote of the day: {latestResult.result.quote}</p>
+      <div className={styles.latestresultform}>
+        <h3 className={styles.latestresulth3}>
+          Based on how you are feeling, here's what we suggest
+        </h3>
+        <div className={styles.ytvideo}>
+          <iframe
+            title="meditation video"
+            width="420"
+            height="315"
+            src={latestResult.result.resource.link}
+            frameborder="0"
+          ></iframe>
+        </div>
+        <div>
+          <p className={styles.quote}>
+            Quote of the day:
+            <blockquote>{latestResult.result.quote}</blockquote>
+          </p>
+        </div>
       </div>
       <Link to="/history">Done</Link>
     </div>

@@ -2,3 +2,59 @@ img{
     width: 200px;
     height: 200px;
 }
+.resultSentence{
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+}
+.latestresulth3{
+    font-size: 2em;
+}
+.latestresultform{
+    border: 3px solid rgba(211, 92, 10, 0.8);
+    background-color: rgba(211, 92, 10, 0.8);
+    border-radius: 20px;
+}
+iframe{
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 5%;
+}
+.quote{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #fff;
+}
+blockquote {
+    font-family: Marcellus, serif;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+}
+/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+blockquote:before {
+    position: absolute;
+    font-size: 6em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+blockquote:after {
+    position: absolute;
+   /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+    float:right;
+    font-size:6em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: "\201D";
+}
+blockquote footer {
+    padding: 0 2em 0 0;
+    text-align:right;
+}
+blockquote cite:before {
+    content: "\2013";
+}
