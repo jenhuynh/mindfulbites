@@ -1,21 +1,104 @@
+h3 {
+    text-align: center;
+    margin: 45px;
+    font-size: 3em;
+    color: #fff;
+}
+form{
+   margin: 55px;
+}
+label, p {
+    display: block;
+    font-size: 1em;
+    text-decoration: underline;
+    padding: 10px;
+}
 .form{
     box-sizing: content-box;
     margin-left: auto;
     margin-right: auto;
-    background-color: #557ee4;
+    background: rgba(212, 236, 221, 0.2);
     padding: 15px;
-    height: 50%;
+    height: 90%;
     width: 50%;
     border-radius: 20px;
-        box-shadow: 0 8px 6px -6px #000;
+    color: #fff;
 } 
-input, select {
-    box-sizing: border-box;
-    border-radius: 20px;
-    width: 60%;
-    margin: 15px;
-    border: 1px solid #f7a440;
-    border-radius: 4px;
-    resize: vertical;
+.moodbtn1{
+    border-radius:21px;
+    width: 100%;
+    background-color:#8AB7FE;
+    color: white;
+    margin: 10px;
+}
+.moodbtn2{
+    border-radius:21px;
+    width: 100%;
+    background-color:#f7bda7;
+    color: white;
+    margin: 10px;
+}
+.moodbtn3{
+    border-radius:21px;
+    width: 100%;
+    background-color:#7fa77d;
+    color: white;
+    margin: 10px;
+}
+.moodbtn4{
+    border-radius:21px;
+    width: 100%;
+    background-color:#d8b9fc;
+    color: white;
+    margin: 10px;
+}
+.moodbtn5{
+    border-radius:21px;
+    width: 100%;
+    background-color:#FF849A;
+    color: white;
+    margin: 10px;
+}
+div {
+    margin: 20px;
+    display: block;
     padding: 10px;
 }
+input, select {
+    background: rgba(231, 231, 231, 0.7);
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+    color:#fff;
+}
+select option {
+    color: #FFFFFE;
+    font-weight: bold;
+}
+// .submitbtn{
+//     font-family: 'Marcellus', serif, 'Open Sans', sans-serif;
+//     background-color: #AB3C15;
+//     padding: 10px;
+//     width: 10%;
+//     color: #fff;
+//     border-radius: 10px;
+//     margin-left: 60%;
+// }
+.addmoodbtn {
+    display: inline-block;
+    background-color: #AB3C15;
+}
+ button.addmoodtbtn, a.cancelbtn  {
+     display: inline;
+    font-size: 0.9em;
+    padding: 5px;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 5%;
+    margin-left: 80%;
+    background-color: #345B63;
+}
+
+
+ 
