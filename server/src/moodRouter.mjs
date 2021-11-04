@@ -39,15 +39,14 @@ moodRouter.get("/latest", async (request, response) => {
 });
 
 // function called getQuote (take the mood and return a string)
-const url = "https://zenquotes.io/api/random";
 async function getQuote() {
-  const response = await fetch(url);
+  const response = await fetch("https://zenquotes.io/api/random");
   let data = await response.json();
   console.log(data[0].h);
   return data[0].h;
 }
 
-getQuote(url);
+getQuote();
 
 //creation time
 moodRouter.use(express.json());
