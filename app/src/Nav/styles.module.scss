@@ -2,12 +2,16 @@
   a[class="active"] {
     // background-color: darkorange;
     display: none;
-    color: white;
+    color: #87AAAA;
     text-decoration: none;
   }
 
-  img {
-    max-height: 50px;
-    max-width: 50px;
+  a.historynav {
+    // background-color: darkorange;
+    display: inline;
+    color: #87AAAA;
+    text-decoration: none;
+    margin: 2%;
   }
 }
+

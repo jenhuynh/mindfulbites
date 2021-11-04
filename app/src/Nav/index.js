@@ -6,9 +6,16 @@ import styles from "./styles.module.scss";
 
 const Nav = () => (
   <nav className={styles.nav}>
-    <NavLink to="/">Add Mood</NavLink>
-    <NavLink to="/about">About</NavLink>
-    <NavLink to="/history">Mood History</NavLink>
+    <NavLink to="/about" className={styles.historynav}>
+      About
+    </NavLink>
+    <NavLink to="/" className={styles.historynav}>
+      Add Mood
+    </NavLink>
+
+    <NavLink to="/history" className={styles.historynav}>
+      Mood History
+    </NavLink>
     <Logout />
   </nav>
 );
