@@ -5,7 +5,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import App from "./App";
 import AuthProvider from "./auth/AuthProvider";
-import { Protected } from "./auth/widgets";
 import reportWebVitals from "./reportWebVitals";
 
 import "./global.scss";
