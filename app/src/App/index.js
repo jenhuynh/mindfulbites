@@ -10,7 +10,6 @@ import MoodHistory from "../MoodHistory";
 // import Tasks from "../Tasks";
 import useApi from "../auth/useApi";
 import useAuth0 from "../auth/useAuth0";
-import { Protected } from "../auth/widgets";
 
 import styles from "./styles.module.scss";
 
@@ -29,7 +28,11 @@ const App = () => {
       {/* <Route path="/" element={<Home />} /> */}
       <Route path="/" element={<AddMood />} />
       <Route path="/latest" element={<LatestResult />} />
-      <Route path="/history" element={<MoodHistory />} />
+      <Route
+        className="{styles.donebtn}"
+        path="/history"
+        element={<MoodHistory />}
+      />
       <Route path="/about" element={<About />} />
     </Routes>
   );
