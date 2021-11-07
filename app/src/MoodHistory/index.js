@@ -19,7 +19,7 @@ const MoodHistory = () => {
   }, [loading, loadMoods]);
 
   return loading ? null : (
-    <>
+    <div className={styles.historybody}>
       <Nav />
       <h1 className={styles.historyh1}>Mood History</h1>
       <p className={styles.historyp}>
@@ -29,32 +29,35 @@ const MoodHistory = () => {
       <section>
         <MoodList {...{ moodHistory }} />
       </section>
-    </>
+    </div>
   );
 };
 const MoodList = ({ moodHistory }) => (
   <table className={styles.moodhistorytable}>
     <tbody className={styles.moodhistorycontent}>
       {moodHistory.map(
-        ({ id, user_id, current_mood, notes, photo, timestamp }) => (
-          <tr key={id}>
-            <td className={styles.historytimestamp}> {timestamp}</td>
-            <div className={styles.historyresults}>
-              <td>{current_mood}</td>
-              <td>{notes}</td>
-              <td>
-                {photo ? (
-                  <img
-                    src={photo}
-                    aria-hidden
-                    alt="latest image by user"
-                    className="latestImg"
-                  />
-                ) : null}
-              </td>
-            </div>
-          </tr>
-        ),
+        ({ id, user_id, current_mood, notes, photo, timestamp }) => {
+          const convertedTimestamp = new Date(timestamp).toLocaleString();
+          return (
+            <tr key={id}>
+              <td className={styles.historytimestamp}> {convertedTimestamp}</td>
+              <div className={styles.historyresults}>
+                <td>{current_mood}</td>
+                <td>{notes}</td>
+                <td>
+                  {photo ? (
+                    <img
+                      src={photo}
+                      aria-hidden
+                      alt="latest image by user"
+                      className="latestImg"
+                    />
+                  ) : null}
+                </td>
+              </div>
+            </tr>
+          );
+        },
       )}
     </tbody>
   </table>
