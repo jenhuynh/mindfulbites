@@ -59,11 +59,11 @@ label, p {
     color: white;
     margin: 10px;
 }
-div {
-    margin: 20px;
-    display: block;
-    padding: 10px;
-}
+// div {
+//     margin: 20px;
+//     display: block;
+//     padding: 10px;
+// }
 input, select {
     background: rgba(231, 231, 231, 0.7);
     border-radius: 12px;
@@ -84,10 +84,6 @@ select option {
 //     border-radius: 10px;
 //     margin-left: 60%;
 // }
-.addmoodbtn {
-    display: inline-block;
-    background-color: #AB3C15;
-}
  button.addmoodtbtn, a.cancelbtn  {
      display: inline;
     font-size: 0.9em;
@@ -96,7 +92,6 @@ select option {
     border-radius: 10px;
     text-decoration: none;
     margin: 5%;
-    margin-left: 80%;
     background-color: #345B63;
 }
 

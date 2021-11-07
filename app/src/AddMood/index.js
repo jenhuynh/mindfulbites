@@ -145,13 +145,14 @@ const AddMood = () => {
                 onChange={(e) => setPhoto(e.target.value)}
               />
             </div>
-
-            <button className={styles.addmoodtbtn} disabled={!canAdd}>
-              Submit
-            </button>
-            <Link to="/history" className={styles.cancelbtn}>
-              Cancel
-            </Link>
+            <div>
+              <button className={styles.addmoodtbtn} disabled={!canAdd}>
+                Submit
+              </button>
+              <Link to="/history" className={styles.cancelbtn}>
+                Cancel
+              </Link>
+            </div>
           </form>
         </div>
       </div>
