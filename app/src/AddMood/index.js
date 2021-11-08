@@ -106,25 +106,6 @@ const AddMood = () => {
                 <label htmlFor="awful">Awful</label>
               </button>
             </form>
-            {/* ////working select form///// */}
-            {/* <div>
-              <label htmlFor="current_mood">Select your mood </label>
-              <select
-                name="current_mood"
-                id="current_mood"
-                value={current_mood}
-                onChange={(e) => setCurrent_Mood(e.target.value)}
-              >
-                <option className="optionBtn">
-                  Please choose how you are feeling:
-                </option>
-                <option value="wonderful">wonderful</option>
-                <option value="great">great</option>
-                <option value="meh">meh</option>
-                <option value="not great">not great</option>
-                <option value="awful">awful</option>
-              </select>
-            </div> */}
             <div className={styles.notes}>
               <label htmlFor="notes">Notes</label>
               <input
@@ -146,12 +127,12 @@ const AddMood = () => {
               />
             </div>
             <div className={styles.addbtns}>
-              <Link to="/history" className={styles.cancelbtn}>
-                Cancel
-              </Link>
               <button className={styles.addmoodtbtn} disabled={!canAdd}>
                 Submit
               </button>
+              <Link to="/history" className={styles.cancelbtn}>
+                Cancel
+              </Link>
             </div>
           </div>
         </form>
