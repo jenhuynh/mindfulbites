@@ -12,7 +12,7 @@ img{
     margin: auto;
 }
 .resultNotes{
-    font-size: 1em;
+    font-size: 1.5em;
 }
 .latestresulth3{
     font-size: 2em;
@@ -68,6 +68,14 @@ blockquote footer {
 }
 blockquote cite:before {
     content: "\2013";
+}
+.zenquotes{
+    color:#fff;
+}
+a.zenquotes{
+    margin-left: auto;
+    text-decoration: none;
+    color:#fff;
 }
 a.historybtn{
     border: 5px solid #87AAAA;
