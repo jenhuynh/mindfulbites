@@ -62,11 +62,19 @@ const LatestResultDetail = ({ latestResult }) => (
             frameborder="0"
           ></iframe>
         </div>
-        <div>
+        {/* <div>
           <p className={styles.quote}>
             Quote of the day:
             <blockquote>{latestResult.result.quote}</blockquote>
           </p>
+        </div> */}
+        <div>
+          <p dangerouslySetInnerHTML={{ __html: latestResult.result.quote }} />
+          {/* <p>Quote of the day: {latestResult.result.quote}</p> */}
+          Inspirational quotes provided by{" "}
+          <a href="https://zenquotes.io/" target="_blank" rel="noreferrer">
+            ZenQuotes API
+          </a>
         </div>
 
         <Link to="/history" className={styles.historybtn}>
