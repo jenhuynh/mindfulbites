@@ -5,13 +5,26 @@
     color: #87AAAA;
     text-decoration: none;
   }
-
   a.historynav {
     // background-color: darkorange;
     display: inline;
     color: #87AAAA;
     text-decoration: none;
-    margin: 2%;
+    margin-left: 0.5%;
+    font-size: 1.2vw;
   }
+  /* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+  div.example {
+    font-size: 1vw;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 300px) {
+  div.example {
+    font-size: 0.8vw;
+  }
+}
 }
 

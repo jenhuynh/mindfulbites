@@ -1,69 +1,61 @@
-h3 {
+.addmoodh3 {
     text-align: center;
-    margin: 45px;
-    font-size: 3em;
-    color: #fff;
-}
-form{
-   margin: 55px;
-}
-label, p {
-    display: block;
-    font-size: 1em;
-    text-decoration: underline;
-    padding: 10px;
+    font-size: 5vw;
+    color: #87AAAA;
+    padding-top: 10px;
 }
 .form{
-    box-sizing: content-box;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(212, 236, 221, 0.2);
-    padding: 15px;
-    height: 90%;
-    width: 50%;
+    box-sizing: box;
+    margin: auto;
+    background-color: rgba(153, 167, 153, 0.8);
+    padding: 5px;
+    width: 60%;
+    height: 550px;
     border-radius: 20px;
     color: #fff;
+    // text-decoration: underline;
 } 
+label{
+    margin: 10px;
+}
 .moodbtn1{
     border-radius:21px;
     width: 100%;
-    background-color:#8AB7FE;
+    background-color:#98bdf9;
     color: white;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 .moodbtn2{
     border-radius:21px;
     width: 100%;
-    background-color:#f7bda7;
+    background-color:#f4c4b1;
     color: white;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 .moodbtn3{
     border-radius:21px;
     width: 100%;
     background-color:#7fa77d;
     color: white;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 .moodbtn4{
     border-radius:21px;
     width: 100%;
-    background-color:#d8b9fc;
+    background-color:#b6a6c9;
     color: white;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 .moodbtn5{
     border-radius:21px;
     width: 100%;
-    background-color:#FF849A;
+    background-color:#f2c9d1;
     color: white;
-    margin: 10px;
+    margin-bottom: 10px;
 }
-// div {
-//     margin: 20px;
-//     display: block;
-//     padding: 10px;
-// }
+div#root {
+    padding: 0;
+}
 input, select {
     background: rgba(231, 231, 231, 0.7);
     border-radius: 12px;
@@ -71,29 +63,28 @@ input, select {
     width: 100%;
     color:#fff;
 }
-select option {
-    color: #FFFFFE;
-    font-weight: bold;
+a.cancelbtn  {
+    border-radius: 100%;    
+    text-align: center;    
+    background-color: #87AAAA;
+    display:inline-block;
+    width: 20%;
+    line-height: 25px;
 }
-// .submitbtn{
-//     font-family: 'Marcellus', serif, 'Open Sans', sans-serif;
-//     background-color: #AB3C15;
-//     padding: 10px;
-//     width: 10%;
-//     color: #fff;
-//     border-radius: 10px;
-//     margin-left: 60%;
-// }
  button.addmoodtbtn, a.cancelbtn  {
-     display: inline;
-    font-size: 0.9em;
-    padding: 5px;
+    float: right;
+    display: inline;
+    font-size: 1em;
     color: #fff;
     border-radius: 10px;
     text-decoration: none;
-    margin: 5%;
-    background-color: #345B63;
+    margin: 3%;
+    background-color: #87AAAA;
 }
-
-
- 
+.moodcontainer{
+    background: rgba(231, 231, 231, 0.3);
+    border-radius: 12px;
+    height: 500px;
+    margin: 10px;
+    padding: 10px;
+}

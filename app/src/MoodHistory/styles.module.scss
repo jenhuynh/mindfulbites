@@ -1,8 +1,11 @@
+.historybody{
+  background-image: url('https://images.pexels.com/photos/10124328/pexels-photo-10124328.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+}
 .historyh1{
-  font-size: 3em;
+  font-size: 4.5vw;
 }
 .historyp{
-  font-size: 1.5em;
+  font-size: 1.5vw;
 }
 .historyh1, .historyp {
   text-align: center;
@@ -17,12 +20,12 @@ tr{
   margin-left: 25%;
 }
 .latestImg {
-  width: 100px;
-  height: 100px;
+  max-width: 100%;
+  height: auto;
 }
 .moodhistorytable {
-border: 3px solid rgba(212, 236, 221, 0.2);
-background-color: rgba(212, 236, 221, 0.2);
+border: 3px solid rgba(153, 167, 153, 0.9);
+background-color: rgba(153, 167, 153, 0.8);
 border-radius: 20px;
 width: 60%;
 color: #fff;
@@ -32,6 +35,7 @@ margin-right: auto;
 .historytimestamp{
   text-decoration: underline;
   padding: 10px;
+  font-size: 1.5vw;
 }
 .historyresults {
   display: block;
