@@ -39,23 +39,29 @@ const MoodList = ({ moodHistory }) => (
         ({ id, user_id, current_mood, notes, photo, timestamp }) => {
           const convertedTimestamp = new Date(timestamp).toLocaleString();
           return (
-            <tr key={id}>
-              <td className={styles.historytimestamp}> {convertedTimestamp}</td>
-              <div className={styles.historyresults}>
-                <td>{current_mood}</td>
-                <td>{notes}</td>
-                <td>
-                  {photo ? (
-                    <img
-                      src={photo}
-                      aria-hidden
-                      alt="latest image by user"
-                      className="latestImg"
-                    />
-                  ) : null}
-                </td>
+            <>
+              <div className={styles.historyOuterContainer}>
+                <tr key={id}>
+                  <td className={styles.historytimestamp}>
+                    {convertedTimestamp}
+                  </td>
+                  <div className={styles.historyresults}>
+                    <td>Mood: {current_mood}</td>
+                    <td> {notes}</td>
+                    <td>
+                      {photo ? (
+                        <img
+                          src={photo}
+                          aria-hidden
+                          alt="latest image by user"
+                          className="latestImg"
+                        />
+                      ) : null}
+                    </td>
+                  </div>
+                </tr>
               </div>
-            </tr>
+            </>
           );
         },
       )}
