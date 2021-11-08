@@ -1,17 +1,23 @@
-.nav {
-  a[class="active"] {
-    // background-color: darkorange;
-    display: none;
-    color: #87AAAA;
-    text-decoration: none;
+.nav {   
+  overflow: sticky;
+  background-color: rgb(153, 167, 153);
+  position:absolute;
+  top: 0;
+  width: 100%;
+ 
+a, a[class="active"], .navh3 {
+  float: right;
+  display: inline;
+  font-size: 1.5vw;
+  padding: 5px;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px;
+  // background-color: #87AAAA;
   }
-  a.historynav {
-    // background-color: darkorange;
-    display: inline;
-    color: #87AAAA;
-    text-decoration: none;
-    margin-left: 0.5%;
-    font-size: 1.2vw;
+  .navh3 {
+    float: left;
+    font-size: 2vw;
   }
   /* If the screen size is 601px or more, set the font-size of <div> to 80px */
 @media only screen and (min-width: 601px) {
@@ -20,7 +26,7 @@
   }
 }
 
-/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+// /* If the screen size is 600px or less, set the font-size of <div> to 30px */
 @media only screen and (max-width: 300px) {
   div.example {
     font-size: 0.8vw;

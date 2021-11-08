@@ -5,9 +5,10 @@ import { Logout } from "../auth/widgets";
 import styles from "./styles.module.scss";
 
 const Nav = () => (
-  <nav className={styles.nav}>
+  <div className={styles.nav}>
+    <h3 className={styles.navh3}>Mindful Bites</h3>
     <NavLink to="/about" className={styles.historynav}>
-      About |
+      About
     </NavLink>
     <NavLink to="/" className={styles.historynav}>
       Add Mood |
@@ -17,7 +18,7 @@ const Nav = () => (
       Mood History |
     </NavLink>
     <Logout />
-  </nav>
+  </div>
 );
 
 export default Nav;
