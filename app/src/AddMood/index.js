@@ -36,11 +36,11 @@ const AddMood = () => {
   };
   console.log(current_mood, timestamp, notes, photo);
   return (
-    <>
-      <div className={styles.addmoodbody}>
-        <h3>How are you feeling today?</h3>
-        <div className={styles.form}>
-          <form {...{ onSubmit }}>
+    <div className={styles.addmoodbody}>
+      <h3 className={styles.addmoodh3}>How are you feeling today?</h3>
+      <div className={styles.form}>
+        <form {...{ onSubmit }}>
+          <div className={styles.moodcontainer}>
             <div>
               <label htmlFor="timestamp">Timestamp | Date </label>
               <input
@@ -125,7 +125,7 @@ const AddMood = () => {
                 <option value="awful">awful</option>
               </select>
             </div> */}
-            <div>
+            <div className={styles.notes}>
               <label htmlFor="notes">Notes</label>
               <input
                 id="notes"
@@ -145,18 +145,18 @@ const AddMood = () => {
                 onChange={(e) => setPhoto(e.target.value)}
               />
             </div>
-            <div>
-              <button className={styles.addmoodtbtn} disabled={!canAdd}>
-                Submit
-              </button>
+            <div className={styles.addbtns}>
               <Link to="/history" className={styles.cancelbtn}>
                 Cancel
               </Link>
+              <button className={styles.addmoodtbtn} disabled={!canAdd}>
+                Submit
+              </button>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
-    </>
+    </div>
   );
 };
 
