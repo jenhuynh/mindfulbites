@@ -36,18 +36,20 @@ const LatestResult = () => {
 const LatestResultDetail = ({ latestResult }) => (
   <>
     <div>
-      <ul>
-        <p className={styles.resultSentence}>
-          You are feeling ...{latestResult.mood}
-        </p>
-        <p>{latestResult.notes ? <p>Notes: {latestResult.notes}</p> : null}</p>
-        <p>
-          {latestResult.photo ? (
-            <img src={latestResult.photo} alt="latest by the user" />
-          ) : null}
-        </p>
-      </ul>
       <div className={styles.latestresultform}>
+        <ul>
+          <p className={styles.resultMood}>
+            You are feeling {latestResult.mood}.
+          </p>
+          <p className={styles.resultNotes}>
+            {latestResult.notes ? <p>Notes: {latestResult.notes}</p> : null}
+          </p>
+          <p className={styles.resultPhoto}>
+            {latestResult.photo ? (
+              <img src={latestResult.photo} alt="latest by the user" />
+            ) : null}
+          </p>
+        </ul>
         <h3 className={styles.latestresulth3}>
           Based on how you are feeling, here's what we suggest
         </h3>
@@ -66,8 +68,11 @@ const LatestResultDetail = ({ latestResult }) => (
             <blockquote>{latestResult.result.quote}</blockquote>
           </p>
         </div>
+
+        <Link to="/history" className={styles.historybtn}>
+          Done
+        </Link>
       </div>
-      <Link to="/history">Done</Link>
     </div>
   </>
 );
