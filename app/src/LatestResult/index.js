@@ -51,7 +51,7 @@ const LatestResultDetail = ({ latestResult }) => (
           </p>
         </ul>
         <h3 className={styles.latestresulth3}>
-          Based on how you are feeling, here's what we suggest
+          Based on how you are feeling, here's what we suggest:
         </h3>
         <div className={styles.ytvideo}>
           <iframe
@@ -63,13 +63,26 @@ const LatestResultDetail = ({ latestResult }) => (
           ></iframe>
         </div>
         <div>
-          <p className={styles.quote}>
-            Quote of the day:
-            <blockquote>{latestResult.result.quote}</blockquote>
+          <blockquote
+            className={styles.quote}
+            dangerouslySetInnerHTML={{ __html: latestResult.result.quote }}
+          ></blockquote>
+
+          <p className={styles.zenquotes}>
+            Inspirational quotes provided by{" "}
+            <a
+              href="https://zenquotes.io/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.zenquotes}
+            >
+              ZenQuotes API
+            </a>
+            .
           </p>
         </div>
-
         <Link to="/history" className={styles.historybtn}>
+          {" "}
           Done
         </Link>
       </div>
