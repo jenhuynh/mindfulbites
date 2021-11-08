@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
+import About from "../About";
 import LatestResult from "../LatestResult";
 import MoodHistory from "../MoodHistory";
 // import MoodResult from "../MoodResult";
@@ -51,8 +52,8 @@ const Home = () => {
         <p>{process.env.REACT_APP_SUBTITLE}</p> */}
       </header>
       {isAuthenticated ? <LatestResult /> : null}
-      {/* {isAuthenticated ? <MoodResult /> : null} */}
       {isAuthenticated ? <MoodHistory /> : null}
+      {isAuthenticated ? <About /> : null}
     </>
   );
 };
