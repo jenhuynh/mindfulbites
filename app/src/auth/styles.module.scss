@@ -1,0 +1,23 @@
+.widgetsbtn {
+    font-family: 'Marcellus', serif, 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 2vw;
+    border-radius: 100px;
+    position: fixed; /* or absolute */
+    top: 60%;
+    left: 45%;
+    background-color:#87AAAA;
+    padding: 10px;
+    width: 20%;
+}
+.authLogout{
+    font-family: 'Marcellus', serif, 'Open Sans', sans-serif;
+    color: #fff;
+    border-radius: 100px;
+    background-color: #87AAAA;
+    font-size: 1vw;
+    padding: 6px;
+    width: 5%;
+    float:right;
+    margin-top: 3px;
+}

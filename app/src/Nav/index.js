@@ -1,30 +1,24 @@
 import { NavLink } from "react-router-dom";
 
-import useAuth0 from "../auth/useAuth0";
-import { Login, Logout } from "../auth/widgets";
+import { Logout } from "../auth/widgets";
 
 import styles from "./styles.module.scss";
 
 const Nav = () => (
-  <nav className={styles.nav}>
-    <NavLink to="/" end>
-      Home
-    </NavLink>{" "}
-    | <NavLink to="dashboard">Dashboard</NavLink> | <Auth />
-  </nav>
+  <div className={styles.nav}>
+    <h3 className={styles.navh3}>Mindful Bites</h3>
+    <NavLink to="/about" className={styles.historynav}>
+      About
+    </NavLink>
+    <NavLink to="/" className={styles.historynav}>
+      Add Mood |
+    </NavLink>
+
+    <NavLink to="/history" className={styles.historynav}>
+      Mood History |
+    </NavLink>
+    <Logout />
+  </div>
 );
-
-const Auth = () => {
-  const { isAuthenticated, user } = useAuth0();
-
-  return isAuthenticated ? (
-    <>
-      <img src={user.picture} alt="" />
-      Hello, {user.given_name} <Logout />
-    </>
-  ) : (
-    <Login />
-  );
-};
 
 export default Nav;
