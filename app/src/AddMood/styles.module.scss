@@ -64,11 +64,11 @@ input, select {
     color:#fff;
 }
 a.cancelbtn  {
-    border-radius: 100%;    
+    border-radius: 15px;    
     text-align: center;    
     background-color: #87AAAA;
     display:inline-block;
-    width: 20%;
+    width: 10%;
     line-height: 25px;
 }
  button.addmoodtbtn, a.cancelbtn  {
@@ -78,7 +78,7 @@ a.cancelbtn  {
     color: #fff;
     border-radius: 10px;
     text-decoration: none;
-    margin: 3%;
+    margin: 2%;
     background-color: #87AAAA;
 }
 .moodcontainer{
