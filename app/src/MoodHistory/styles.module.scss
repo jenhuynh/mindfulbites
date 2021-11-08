@@ -1,27 +1,34 @@
-.historybody{
-  background-image: url('https://images.pexels.com/photos/10124328/pexels-photo-10124328.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-}
 .historyh1{
   font-size: 4.5vw;
+  padding-top: 3.5vw;
 }
 .historyp{
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 .historyh1, .historyp {
   text-align: center;
   text-decoration: none;
   color: #87AAAA;
 }
+.historyOuterContainer{
+  border: 3px solid rgba(231, 231, 231, 0.3);
+  background: rgba(231, 231, 231, 0.3);
+  border-radius: 20px;
+  font-size: 1.5vw;
+  color: #fff;
+  margin: 50px;
+}
 td, tr{
-  display: block;
+ margin: auto;
   width: 100%;
 }
-tr{
-  margin-left: 25%;
+td{
+  width: 40%;
 }
 .latestImg {
   max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 .moodhistorytable {
 border: 3px solid rgba(153, 167, 153, 0.9);
@@ -38,10 +45,7 @@ margin-right: auto;
   font-size: 1.5vw;
 }
 .historyresults {
-  display: block;
+  display: inline;
   border-radius: 5px;
-  background: rgba(254, 254, 254, 0.4);
-  // border: 3px solid rgba(231, 231, 231);
   width: 50%;
-  text-align: center;
 }
