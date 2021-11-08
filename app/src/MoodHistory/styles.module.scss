@@ -1,14 +1,51 @@
-.moodhistory-table {
-  margin-left: auto;
-  margin-right: auto;
+.historyh1{
+  font-size: 4.5vw;
+  padding-top: 3.5vw;
 }
-table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
+.historyp{
+  font-size: 2vw;
 }
-.beachImg {
-  width: 100px;
-  height: 100px;
+.historyh1, .historyp {
+  text-align: center;
+  text-decoration: none;
+  color: #87AAAA;
+}
+.historyOuterContainer{
+  border: 3px solid rgba(231, 231, 231, 0.3);
+  background: rgba(231, 231, 231, 0.3);
+  border-radius: 20px;
+  font-size: 1.5vw;
+  color: #fff;
+  margin: 50px;
+}
+td, tr{
+ margin: auto;
+  width: 100%;
+}
+td{
+  width: 40%;
+}
+.latestImg {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+.moodhistorytable {
+border: 3px solid rgba(153, 167, 153, 0.9);
+background-color: rgba(153, 167, 153, 0.8);
+border-radius: 20px;
+width: 60%;
+color: #fff;
+margin-left: auto;
+margin-right: auto;
+}
+.historytimestamp{
+  text-decoration: underline;
+  padding: 10px;
+  font-size: 1.5vw;
+}
+.historyresults {
+  display: inline;
+  border-radius: 5px;
+  width: 50%;
 }
