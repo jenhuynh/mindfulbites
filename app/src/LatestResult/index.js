@@ -50,41 +50,39 @@ const LatestResultDetail = ({ latestResult }) => (
             ) : null}
           </p>
         </ul>
-        <h3 className={styles.latestresulth3}>
-          Based on how you are feeling, here's what we suggest
-        </h3>
-        <div className={styles.ytvideo}>
-          <iframe
-            title="meditation video"
-            width="420"
-            height="315"
-            src={latestResult.result.resource.link}
-            frameborder="0"
-          ></iframe>
+        <div className={styles.resultInnerContainer}>
+          <h3 className={styles.latestresulth3}>
+            Based on how you are feeling, here's what we suggest
+          </h3>
+          <div className={styles.ytvideo}>
+            <iframe
+              title="meditation video"
+              width="420"
+              height="315"
+              src={latestResult.result.resource.link}
+              frameborder="0"
+            ></iframe>
+          </div>
+          <div>
+            <p
+              dangerouslySetInnerHTML={{ __html: latestResult.result.quote }}
+              className={styles.quote}
+            />
+            {/* <p>Quote of the day: {latestResult.result.quote}</p> */}
+            <p className={styles.zenquotes}>
+              Inspirational quotes provided by{" "}
+              <a
+                href="https://zenquotes.io/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.zenquotes}
+              >
+                ZenQuotes API
+              </a>
+              .
+            </p>
+          </div>
         </div>
-        {/* <div>
-          <p className={styles.quote}>
-            Quote of the day:
-            <blockquote>{latestResult.result.quote}</blockquote>
-          </p>
-        </div> */}
-        <div>
-          <p dangerouslySetInnerHTML={{ __html: latestResult.result.quote }} />
-          {/* <p>Quote of the day: {latestResult.result.quote}</p> */}
-          <p className={styles.zenquotes}>
-            Inspirational quotes provided by{" "}
-            <a
-              href="https://zenquotes.io/"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.zenquotes}
-            >
-              ZenQuotes API
-            </a>
-            .
-          </p>
-        </div>
-
         <Link to="/history" className={styles.historybtn}>
           Done
         </Link>
