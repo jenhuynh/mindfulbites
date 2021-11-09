@@ -48,6 +48,7 @@ const AddMood = () => {
                 type="datetime-local"
                 name="timestamp"
                 value={timestamp}
+                placeholder="Enter Date and Time"
                 onChange={(e) => setTimestamp(e.target.value)}
               />
             </div>
@@ -68,6 +69,7 @@ const AddMood = () => {
                   type="radio"
                   id="wonderful"
                   name="current_mood"
+                  placeholder="Select your mood"
                   value="wonderful"
                 />
                 <label htmlFor="wonderful" className="moodmenu">
@@ -79,12 +81,19 @@ const AddMood = () => {
                   type="radio"
                   id="great"
                   name="current_mood"
+                  placeholder="Select your mood"
                   value="great"
                 />
                 <label htmlFor="great">Great</label>
               </button>
               <button className={styles.moodbtn3}>
-                <input type="radio" id="meh" name="current_mood" value="meh" />
+                <input
+                  type="radio"
+                  id="meh"
+                  name="current_mood"
+                  placeholder="Select your mood"
+                  value="meh"
+                />
                 <label htmlFor="meh">Meh</label>
               </button>
               <button className={styles.moodbtn4}>
@@ -92,6 +101,7 @@ const AddMood = () => {
                   type="radio"
                   id="great"
                   name="current_mood"
+                  placeholder="Select your mood"
                   value="not great"
                 />
                 <label htmlFor="not great">Not Great</label>
@@ -101,33 +111,40 @@ const AddMood = () => {
                   type="radio"
                   id="awful"
                   name="current_mood"
+                  placeholder="Select your mood"
                   value="awful"
                 />
                 <label htmlFor="awful">Awful</label>
               </button>
             </form>
             <div className={styles.notes}>
-              <label htmlFor="notes">Notes</label>
+              <label htmlFor="notes">Add Notes</label>
               <input
                 id="notes"
                 type="text"
                 name="notes"
                 value={notes}
+                placeholder="Add notes"
                 onChange={(e) => setNotes(e.target.value)}
               />
             </div>
             <div>
-              <label htmlFor="photo">Photos</label>
+              <label htmlFor="photo">Add Photo (url)</label>
               <input
                 id="photo"
                 type="text"
                 name="photo"
                 value={photo}
+                placeholder="Insert url link of photo"
                 onChange={(e) => setPhoto(e.target.value)}
               />
             </div>
             <div className={styles.addbtns}>
-              <button className={styles.addmoodtbtn} disabled={!canAdd}>
+              <button
+                className={styles.addmoodtbtn}
+                name="submit"
+                disabled={!canAdd}
+              >
                 Submit
               </button>
               <Link to="/history" className={styles.cancelbtn}>
