@@ -1,9 +1,6 @@
-import {
-  getByPlaceholderText,
-  fireEvent,
-  prettyDOM,
-  render,
-} from "@testing-library/react";
+import { fireEvent, prettyDOM, render } from "@testing-library/react";
+import { createMemoryHistory } from "history";
+import { Router } from "react-router-dom";
 
 import AddMood from "./AddMood";
 import App from "./App";
@@ -11,7 +8,12 @@ import App from "./App";
 //tests for input and placeholders in addmood form exists
 describe("<AddMood />", () => {
   test("renders the form correctly", () => {
-    const { getByPlaceholderText } = render(<AddMood />);
+    const history = createMemoryHistory();
+    const { getByPlaceholderText } = render(
+      <Router history={history}>
+        <AddMood />
+      </Router>,
+    );
     const timestampInput = getByPlaceholderText("Enter Date and Time");
     const currentMoodInput = getByPlaceholderText("Select your mood");
     const noteInput = getByPlaceholderText("Add notes");
@@ -27,7 +29,7 @@ describe("<AddMood />", () => {
   //test for submit functionality
   test("Submit button works", () => {
     //setup testing
-    const { getByPlaceholderText, getByRole, container } = render(<App />);
+    const { getByPlaceholderText, getByRole, container } = render(<AddMood />);
     const timestampInput = getByPlaceholderText("Enter Date and Time");
     const currentMoodInput = getByPlaceholderText("Select your mood");
     const noteInput = getByPlaceholderText("Add notes");
