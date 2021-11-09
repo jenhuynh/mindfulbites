@@ -51,10 +51,6 @@ const AddMood = () => {
                 onChange={(e) => setTimestamp(e.target.value)}
               />
             </div>
-            {/* ///does not work//// */}
-            {/* {/* <div>
-              <label htmlFor="current_mood">Select your mood </label>
-             /*} */}
             <p>Choose your mood:</p>
             <form
               className={styles.moodbtn}
@@ -106,7 +102,7 @@ const AddMood = () => {
                 <label htmlFor="awful">Awful</label>
               </button>
             </form>
-            <div className={styles.notes}>
+            <div>
               <label htmlFor="notes">Notes</label>
               <input
                 id="notes"
