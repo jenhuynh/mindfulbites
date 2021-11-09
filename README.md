@@ -1,143 +1,111 @@
 # Mindful Bites
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="96" height="96"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,19.3479l-3.7688,3.69531c0,0 -16.22724,15.93935 -21.45801,41.75073c-13.18489,-8.97771 -25.64673,-12.54517 -25.64673,-12.54517l-5.25952,-1.50122l-1.41724,5.29101c0,0 -6.56074,24.39491 5.8999,49.22534c-10.69649,1.30852 -18.50806,4.78711 -18.50806,4.78711l-5.01807,2.22559l2.33057,4.97607c0,0 9.98654,22.33096 31.42065,30.32886c19.81584,7.39405 38.55677,-0.41027 41.53027,-1.70068c2.96107,1.28641 21.71259,9.1029 41.54077,1.70068c21.43745,-8.00299 31.42065,-30.32886 31.42065,-30.32886l2.33057,-4.97607l-5.01807,-2.22559c0,0 -7.99185,-3.54606 -18.87549,-4.8186c12.45974,-24.89392 5.81592,-49.35132 5.81592,-49.35132l-1.42773,-5.27002l-5.24903,1.51172c0,0 -12.35072,3.57293 -25.44727,12.49267c-5.26904,-25.70718 -21.42651,-41.57226 -21.42651,-41.57226zM86,35.86133c4.95049,5.76423 16.125,20.20758 16.125,44.76367c0,24.06912 -10.85948,41.33586 -16.125,48.95239c-5.26552,-7.61654 -16.125,-24.88327 -16.125,-48.95239c0,-24.5561 11.17451,-38.99944 16.125,-44.76367zM133.55615,64.83594c1.15739,6.92888 2.73353,21.77399 -7.62158,39.2207c-6.57829,11.08335 -17.08173,18.74464 -25.87769,23.6311c6.12952,-11.38359 12.81812,-28.0122 12.81812,-47.06274c0,-1.28222 -0.09776,-2.50995 -0.15747,-3.7583c8.25787,-6.59984 15.73742,-10.05517 20.83862,-12.03076zM38.24438,64.96192c5.13265,1.97087 12.69896,5.45729 21.02759,12.12524c-0.05302,1.177 -0.14697,2.33085 -0.14697,3.53784c0,19.0959 6.72937,35.75154 12.8706,47.13623c-8.82391,-4.86127 -19.39564,-12.49539 -26.02466,-23.59961c-10.40252,-17.42519 -8.86367,-32.26806 -7.72656,-39.1997zM131.05761,115.573c5.95008,0.10132 11.02896,1.16485 14.87574,2.28857c-3.42032,5.61514 -10.03987,15.17028 -22.0459,19.65234c-7.3922,2.75964 -15.40386,2.49749 -21.98291,1.45923c9.02803,-4.53553 20.43922,-11.92224 29.15308,-23.40015zM40.78491,115.58349c8.7517,11.51683 20.22893,18.89485 29.30005,23.42114c-6.53898,1.00777 -14.44467,1.23591 -21.75195,-1.49072c-11.99863,-4.47715 -18.61252,-14.03481 -22.0354,-19.65234c3.76464,-1.09847 8.71279,-2.13575 14.4873,-2.27808z"></path></g></g></svg>
 
-## Prerequisites
+# Overview
+Mindful Bites is a web app designed to improve mental health and well being. People are able to track their moods and get guided meditations based on how they are feeling.
 
-### Docker
+<i>Feel free to view Mindful Bites on <a href="https://mindfulbites.herokuapp.com/" target="_blank" rel="noopener noreferrer">Heroku</a>.</i>
 
-This project relies on Docker to run the PostgreSQL server. You must install
-Docker first before continuing.
+# Tech Stack (PERN)
+<h3><b> Tools </b></h3>
+<ul>
+  <li>Chrome Developer Tools</li>
+  <li>VS Code</li>
+  <li>TDD (Jest & RTL)</li>
+  <li>Scrum</li>
+  <li>Terminal</li>
+  <li>Git</li>
+  <li>GitHub</li>
+</ul>
 
-Use one of these methods:
+<h3><b> Languages </b></h3>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
 
-- Use [Homebrew][] on macOS: `brew install --cask docker`
-- [Follow the instructions on the Docker website][docker-www]
+<h3><b> Frameworks </b></h3>
+<ul>
+  <li>PostgreSQL</li>
+  <li>Express</li>
+  <li>React.js</li>
+  <li>Node.js</li>
+</ul>
 
-Once you've installed Docker Desktop, you'll need to launch the app. On macOS,
-it's located in `/Applications/Docker`.
+# Installation Process
 
-### Node
+###  Prerequisites
+<p>This project relies on Docker to run the PostgreSQL server. You must install Docker first before continuing.
 
-You'll need to install Node v14 or above. [`nvm`][nvm] is highly recommended.
+Use one of these methods to download Docker:
 
-## Create a New Repository From This Template
+<ul>
+  <li>Use <a href="https://brew.sh/">Homebrew</a> on macOS: brew install --cask docker</li>
+  <li><a href="https://docs.docker.com/get-docker/">Follow the instructions on the Docker website</a></li>
+</ul>
 
-[Generate a new repository from this template](https://github.com/gsong/express-react-project-starter/generate).
+Once you've installed Docker Desktop, you'll need to launch the app. On macOS, it's located in /Applications/Docker.</p>
 
-[See GitHub documentation for more details](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+### Node and npm
+<p>You'll need to install Node v14 and npm v8 or above.</p>
 
-## Set Up the Development Environment
+## Git Clone or Create a New Repository From This Template
+<p>Learn to<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository"> Git Clone</a> my repository</p>
+<p><a href="https://github.com/gsong/express-react-project-starter/generate">Generate a new repository </a>from this project.</p>
+<p>See GitHub documentation for <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template">more details.</a></p>
 
-### Install NPM Packages
 
+# Set Up the Development Environment
+
+<b> Install NPM Packages</b>
 ```sh
 npm install
 ```
-
-### Set Up `postgres` User Password and Database Name
-
-We need to set up couple pieces of information in order to start a new
-PostgreSQL server instance, as well as to connect to it later from the Express
-server.
-
-1. Copy the example environment file
-
-   ```sh
-   cp .env.example .env
-   ```
-
-2. You can choose to edit `.env` or just use as-is.
-
-[See the PostgreSQL Docker image documentation for more
-information][dh-postgres].
-
-### Initialize the Database
-
-Let's set up the database server, create the application database, and seed it
-with some data. You only need to do this the first time you set up your
-development environment.
-
-```sh
-npm run db:init
-```
-
-ℹ️ If you ever need to start over with the database, you can run this command
-again which will delete your existing data and start from scratch.
-
-## Start the Development Environment
-
+<b>Start the Development Environment</b>
 ```sh
 npm start
 ```
+<b>You should see the development environment display on <a href="http://localhost:3000"></a>http://localhost:3000.</b>
 
-Visit <http://localhost:3000>.
-
-## Shut Down the Development Environment
+# Shut Down the Development Environment
 
 1. `Ctrl-C` to stop the Express and React development servers.
 1. `npm stop` to stop and destroy the PostgreSQL Docker container. Don't worry,
    your data is safe.
 
-## Need to Start a `psql` Session?
 
-```sh
-npm run psql
-```
 
-## Want More Details?
+# MVP (Minimal Viable Product)
+<ul>
+  <li>User registration</li>
+  <li>Form that tracks mood</li>
+  <li>User receives a guided meditation based on mood entered</li>
+</ul>
 
-- [Read about the application stack](docs/application-stack.md).
-- [Read about the Express server](server/README.md).
-- [Read about the React app](app/README.md).
+# Nice to Haves
+<ul>
+  <li>Add note component to mood tracker form</li>
+  <li>Add photo component to mood tracker form</li>
+  <li>Goals tracker</li>
+  <li>Journal entry component</li>
+  <li>Metrics gathering through like and dislike buttons </li>
+  <li>Mood chart </li>
+  <li>Export/downloaded mood history </li>
+</ul>
 
-## Deployment
+# Data Schema
 
-[Read about setting up and deploying to Heroku](docs/deployment.md).
+ <img src="/Users/jenhh/src/mindfulbites/app/src/images/mindful_bites_data_schema.png">
 
-## Examples Implemented Using This Template
+# Userflow
+ <img src="/Users/jenhh/src/mindfulbites/app/src/images/mindful_bites_user_flow.png">
 
-- [Adding a new feature step-by-step](https://github.com/gsong/express-react-project-starter/pull/29)
-- [Store binary data in PostgreSQL](https://github.com/gsong/express-react-project-starter/pull/36)
-- [Eventonica](https://github.com/gsong/express-react-project-starter/pull/25)
-- [Integrate Auth0](https://github.com/gsong/express-react-project-starter/pull/44)
-- [Integrate Google Calendar](https://github.com/gsong/express-react-project-starter/pull/3)
+# Wireframe
+ <img src="/Users/jenhh/src/mindfulbites/app/src/images/mindful_bites_mockup.png">
 
-[deploy-badge]: https://github.com/gsong/express-react-project-starter/actions/workflows/deploy.yaml/badge.svg
-[deploy-workflow]: https://github.com/gsong/express-react-project-starter/actions/workflows/deploy.yaml
-[dh-postgres]: https://hub.docker.com/_/postgres
-[docker-www]: https://docs.docker.com/get-docker/
-[homebrew]: https://brew.sh
-[live]: https://tt-express-react-example.herokuapp.com
-[nvm]: https://github.com/nvm-sh/nvm
-[reset-badge]: https://github.com/gsong/express-react-project-starter/actions/workflows/reset-db.yml/badge.svg
-[reset-workflow]: https://github.com/gsong/express-react-project-starter/actions/workflows/reset-db.yml
 
-## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/aedward8"><img src="https://avatars.githubusercontent.com/u/63216164?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abigail Edwards</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-starter/issues?q=author%3Aaedward8" title="Bug reports">🐛</a> <a href="#ideas-aedward8" title="Ideas, Planning, & Feedback">🤔</a> <a href="#question-aedward8" title="Answering Questions">💬</a> <a href="#userTesting-aedward8" title="User Testing">📓</a></td>
-    <td align="center"><a href="http://blog.ndpsoftware.com/"><img src="https://avatars.githubusercontent.com/u/54177?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Peterson</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-starter/commits?author=ndp" title="Code">💻</a> <a href="#mentoring-ndp" title="Mentoring">🧑‍🏫</a></td>
-    <td align="center"><a href="https://github.com/carbonsoda"><img src="https://avatars.githubusercontent.com/u/22334165?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Avery</b></sub></a><br /><a href="#infra-carbonsoda" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/gsong/express-react-project-starter/pulls?q=is%3Apr+reviewed-by%3Acarbonsoda" title="Reviewed Pull Requests">👀</a> <a href="#userTesting-carbonsoda" title="User Testing">📓</a></td>
-    <td align="center"><a href="https://github.com/sunnybrie"><img src="https://avatars.githubusercontent.com/u/76143251?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brie Klassen</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-starter/issues?q=author%3Asunnybrie" title="Bug reports">🐛</a> <a href="https://github.com/gsong/express-react-project-starter/commits?author=sunnybrie" title="Documentation">📖</a> <a href="#ideas-sunnybrie" title="Ideas, Planning, & Feedback">🤔</a> <a href="#question-sunnybrie" title="Answering Questions">💬</a> <a href="https://github.com/gsong/express-react-project-starter/pulls?q=is%3Apr+reviewed-by%3Asunnybrie" title="Reviewed Pull Requests">👀</a> <a href="#userTesting-sunnybrie" title="User Testing">📓</a></td>
-    <td align="center"><a href="https://github.com/gsong"><img src="https://avatars.githubusercontent.com/u/607420?v=4?s=100" width="100px;" alt=""/><br /><sub><b>George Song</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-starter/commits?author=gsong" title="Code">💻</a> <a href="https://github.com/gsong/express-react-project-starter/commits?author=gsong" title="Documentation">📖</a> <a href="#infra-gsong" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-gsong" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/jenhuynh"><img src="https://avatars.githubusercontent.com/u/15962197?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jen Huynh</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-starter/issues?q=author%3Ajenhuynh" title="Bug reports">🐛</a> <a href="#userTesting-jenhuynh" title="User Testing">📓</a></td>
-    <td align="center"><a href="https://github.com/m3ia"><img src="https://avatars.githubusercontent.com/u/38749469?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Meia</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-starter/commits?author=m3ia" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://www.tabbykatz.com/"><img src="https://avatars.githubusercontent.com/u/55110763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tabitha O'Melay</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-starter/issues?q=author%3Atabbykatz" title="Bug reports">🐛</a> <a href="#question-tabbykatz" title="Answering Questions">💬</a> <a href="https://github.com/gsong/express-react-project-starter/pulls?q=is%3Apr+reviewed-by%3Atabbykatz" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://github.com/xiaozhong21"><img src="https://avatars.githubusercontent.com/u/11522217?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Xiao Zhong</b></sub></a><br /><a href="#question-xiaozhong21" title="Answering Questions">💬</a> <a href="#userTesting-xiaozhong21" title="User Testing">📓</a></td>
-    <td align="center"><a href="https://github.com/ZelmaSedano"><img src="https://avatars.githubusercontent.com/u/55029831?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ZelmaSedano</b></sub></a><br /><a href="#tutorial-ZelmaSedano" title="Tutorials">✅</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
