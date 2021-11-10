@@ -107,11 +107,11 @@ npm start
 
 # Data Schema
 
- <img src="https://raw.githubusercontent.com/jenhuynh/mindfulbites/main/mindful_bites_data_schema.png" width="300px">
+ <img src="app/images/mindful_bites_data_schema.png" width="300px">
 
  # Userflow
- <img src="https://raw.githubusercontent.com/jenhuynh/mindfulbites/main/mindful_bites_user_flow.png" width="300px">
+ <img src="app/images/mindful_bites_user_flow.png" width="300px">
 
  # Wireframe
- <img src="https://raw.githubusercontent.com/jenhuynh/mindfulbites/main/images/mindful_bites_mockup.png" width="300px">
+ <img src="app/images/mindful_bites_mockup.png" width="300px">
 <h6><i>Lotus icon by <a href="https://icons8.com/icon/WHysRa6y4Q4d/lotus">Icons8</a></i></h6>
