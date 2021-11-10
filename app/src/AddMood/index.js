@@ -42,66 +42,77 @@ const AddMood = () => {
         <form {...{ onSubmit }}>
           <div className={styles.moodcontainer}>
             <div>
-              <label htmlFor="timestamp">Timestamp | Date </label>
+              <label htmlFor="Timestamp">Timestamp</label>
               <input
                 id="timestamp"
                 type="datetime-local"
                 name="timestamp"
                 value={timestamp}
+                placeholder="Enter Date and Time"
                 onChange={(e) => setTimestamp(e.target.value)}
               />
             </div>
             <p>Choose your mood:</p>
-            <form
+            {/* <form
               className={styles.moodbtn}
               name="current_mood"
               id="current_mood"
               value={current_mood}
               onChange={(e) => setCurrent_Mood(e.target.value)}
-            >
-              <button className={styles.moodbtn1}>
-                <input
-                  type="radio"
-                  id="wonderful"
-                  name="current_mood"
-                  value="wonderful"
-                />
-                <label htmlFor="wonderful" className="moodmenu">
-                  Wonderful
-                </label>
-              </button>
-              <button className={styles.moodbtn2}>
-                <input
-                  type="radio"
-                  id="great"
-                  name="current_mood"
-                  value="great"
-                />
-                <label htmlFor="great">Great</label>
-              </button>
-              <button className={styles.moodbtn3}>
-                <input type="radio" id="meh" name="current_mood" value="meh" />
-                <label htmlFor="meh">Meh</label>
-              </button>
-              <button className={styles.moodbtn4}>
-                <input
-                  type="radio"
-                  id="great"
-                  name="current_mood"
-                  value="not great"
-                />
-                <label htmlFor="not great">Not Great</label>
-              </button>
-              <button className={styles.moodbtn5}>
-                <input
-                  type="radio"
-                  id="awful"
-                  name="current_mood"
-                  value="awful"
-                />
-                <label htmlFor="awful">Awful</label>
-              </button>
-            </form>
+            > */}
+            <button className={styles.moodbtn1}>
+              <input
+                type="radio"
+                id="wonderful"
+                name="current_mood"
+                value="wonderful"
+                onChange={(e) => setCurrent_Mood(e.target.value)}
+              />
+              <label htmlFor="wonderful" className="moodmenu">
+                Wonderful
+              </label>
+            </button>
+            <button className={styles.moodbtn2}>
+              <input
+                type="radio"
+                id="great"
+                name="current_mood"
+                value="great"
+                onChange={(e) => setCurrent_Mood(e.target.value)}
+              />
+              <label htmlFor="great">Great</label>
+            </button>
+            <button className={styles.moodbtn3}>
+              <input
+                type="radio"
+                id="meh"
+                name="current_mood"
+                value="meh"
+                onChange={(e) => setCurrent_Mood(e.target.value)}
+              />
+              <label htmlFor="meh">Meh</label>
+            </button>
+            <button className={styles.moodbtn4}>
+              <input
+                type="radio"
+                id="great"
+                name="current_mood"
+                value="not great"
+                onChange={(e) => setCurrent_Mood(e.target.value)}
+              />
+              <label htmlFor="not great">Not Great</label>
+            </button>
+            <button className={styles.moodbtn5}>
+              <input
+                type="radio"
+                id="awful"
+                name="current_mood"
+                value="awful"
+                onChange={(e) => setCurrent_Mood(e.target.value)}
+              />
+              <label htmlFor="awful">Awful</label>
+            </button>
+            {/* </form> */}
             <div>
               <label htmlFor="notes">Notes</label>
               <input
@@ -109,6 +120,7 @@ const AddMood = () => {
                 type="text"
                 name="notes"
                 value={notes}
+                placeholder="Add notes"
                 onChange={(e) => setNotes(e.target.value)}
               />
             </div>
@@ -119,6 +131,7 @@ const AddMood = () => {
                 type="text"
                 name="photo"
                 value={photo}
+                placeholder="Insert url link of photo"
                 onChange={(e) => setPhoto(e.target.value)}
               />
             </div>
