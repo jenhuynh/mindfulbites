@@ -1,9 +1,11 @@
 .nav {   
-  overflow: sticky;
-  background-color: rgb(153, 167, 153);
-  position:absolute;
+  // overflow: visible;
+  background-color: #99a799;
+  position: absolute;
   top: 0;
+  height: 7vh;
   width: 100%;
+  margin: -8px;
  
 a, a[class="active"], .navh3 {
   float: right;
@@ -13,7 +15,7 @@ a, a[class="active"], .navh3 {
   color: #fff;
   text-decoration: none;
   margin: 5px;
-  // background-color: #87AAAA;
+  margin-top: 2vh;
   }
   .navh3 {
     float: left;
