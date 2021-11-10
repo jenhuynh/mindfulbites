@@ -3,7 +3,6 @@
   background-color: #99a799;
   position: absolute;
   top: 0;
-  height: 7vh;
   width: 100%;
   margin: -8px;
  
@@ -15,11 +14,12 @@ a, a[class="active"], .navh3 {
   color: #fff;
   text-decoration: none;
   margin: 5px;
-  margin-top: 2vh;
+  margin-top: 3vh;
   }
+  
   .navh3 {
     float: left;
-    font-size: 2vw;
+    font-size: 4vh;
   }
   /* If the screen size is 601px or more, set the font-size of <div> to 80px */
 @media only screen and (min-width: 601px) {
