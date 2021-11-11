@@ -113,60 +113,60 @@ const AddMood = () => {
               <label htmlFor="awful">Awful</label>
             </button>
             {/* </form> */}
-              <button className={styles.moodbtn1}>
-                <input
-                  type="radio"
-                  id="wonderful"
-                  name="current_mood"
-                  placeholder="Select your mood"
-                  value="wonderful"
-                />
-                <label htmlFor="wonderful" className="moodmenu">
-                  Wonderful
-                </label>
-              </button>
-              <button className={styles.moodbtn2}>
-                <input
-                  type="radio"
-                  id="great"
-                  name="current_mood"
-                  placeholder="Select your mood"
-                  value="great"
-                />
-                <label htmlFor="great">Great</label>
-              </button>
-              <button className={styles.moodbtn3}>
-                <input
-                  type="radio"
-                  id="meh"
-                  name="current_mood"
-                  placeholder="Select your mood"
-                  value="meh"
-                />
-                <label htmlFor="meh">Meh</label>
-              </button>
-              <button className={styles.moodbtn4}>
-                <input
-                  type="radio"
-                  id="great"
-                  name="current_mood"
-                  placeholder="Select your mood"
-                  value="not great"
-                />
-                <label htmlFor="not great">Not Great</label>
-              </button>
-              <button className={styles.moodbtn5}>
-                <input
-                  type="radio"
-                  id="awful"
-                  name="current_mood"
-                  placeholder="Select your mood"
-                  value="awful"
-                />
-                <label htmlFor="awful">Awful</label>
-              </button>
-            </form>
-<div>
+            {/* <button className={styles.moodbtn1}>
+              <input
+                type="radio"
+                id="wonderful"
+                name="current_mood"
+                placeholder="Select your mood"
+                value="wonderful"
+              />
+              <label htmlFor="wonderful" className="moodmenu">
+                Wonderful
+              </label>
+            </button>
+            <button className={styles.moodbtn2}>
+              <input
+                type="radio"
+                id="great"
+                name="current_mood"
+                placeholder="Select your mood"
+                value="great"
+              />
+              <label htmlFor="great">Great</label>
+            </button>
+            <button className={styles.moodbtn3}>
+              <input
+                type="radio"
+                id="meh"
+                name="current_mood"
+                placeholder="Select your mood"
+                value="meh"
+              />
+              <label htmlFor="meh">Meh</label>
+            </button>
+            <button className={styles.moodbtn4}>
+              <input
+                type="radio"
+                id="great"
+                name="current_mood"
+                placeholder="Select your mood"
+                value="not great"
+              />
+              <label htmlFor="not great">Not Great</label>
+            </button>
+            <button className={styles.moodbtn5}>
+              <input
+                type="radio"
+                id="awful"
+                name="current_mood"
+                placeholder="Select your mood"
+                value="awful"
+              />
+              <label htmlFor="awful">Awful</label>
+            </button> */}
+            {/* </form> */}
+            <div>
               <label htmlFor="notes">Notes</label>
               <input
                 id="notes"
