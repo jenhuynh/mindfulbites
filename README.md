@@ -1,4 +1,5 @@
 # Mindful Bites
+
 <img src="https://img.icons8.com/windows/96/000000/lotus.png"/>
 
 # Overview
@@ -7,10 +8,14 @@ Mindful Bites is a web app designed to improve mental health and well being. Peo
 <i>Feel free to view Mindful Bites on <a href="https://mindfulbites.herokuapp.com/" target="_blank" rel="noopener noreferrer">Heroku</a>.</i>
 
 # Installation Process
+
+
 ###  Prerequisites
 <p>This project relies on Docker to run the PostgreSQL server. You must install Docker first before continuing.
 
 Use one of these methods to download Docker:
+
+
 <ul>
   <li>Use <a href="https://brew.sh/">Homebrew</a> on macOS: brew install --cask docker</li>
   <li><a href="https://docs.docker.com/get-docker/">Follow the instructions on the Docker website</a></li>
@@ -21,10 +26,12 @@ Once you've installed Docker Desktop, you'll need to launch the app. On macOS, i
 ### Node and npm
 <p>You'll need to install Node v14 and npm v8 or above.</p>
 
+
 ## Fork and Git Clone or Create a New Repository 
 <p>Fork and learn to<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository"> Git Clone</a> my repository</p>
 <p><a href="https://github.com/gsong/express-react-project-starter/generate">Generate a new repository </a>from this project.</p>
 <p>See GitHub documentation for <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template">more details.</a></p>
+
 
 # Set Up the Development Environment
 
