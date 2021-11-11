@@ -2,8 +2,8 @@ import { render, screen } from "@testing-library/react";
 
 import LatestResult from "./LatestResult";
 
-//testing if app component exists and renders
-//screen.debug will show us the result of the redner()call
+//testing if latestresult component exists and renders
+//screen.debug will show us the result of the render()call
 describe("LatestResult", () => {
   test("renders LatestResult component", () => {
     render(<LatestResult />);

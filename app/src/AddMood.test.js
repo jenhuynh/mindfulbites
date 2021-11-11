@@ -12,8 +12,8 @@ import {
 } from "@testing-library/react";
 
 import AddMood from "./AddMood";
-//testing if app component exists and renders
-//screen.debug will show us the result of the redner()call
+//testing if add mood component exists and renders
+//screen.debug will show us the result of the render()call
 describe("AddMood", () => {
   test("renders AddMood component", () => {
     render();
