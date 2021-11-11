@@ -35,7 +35,7 @@ Once you've installed Docker Desktop, you'll need to launch the app. On macOS, i
 # Set Up the Development Environment
 1. If you haven't already, run Docker
 
-2. If you haven't already, fork and clone this repository.
+2. If you haven't already, fork and clone this repository
 
 3. Then create a .env file in the app/ directory & add these lines:
 ```REACT_APP_AUTH0_DOMAIN=<copy/paste your api key here>
