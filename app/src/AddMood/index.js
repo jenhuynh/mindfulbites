@@ -48,7 +48,7 @@ const AddMood = () => {
                 type="datetime-local"
                 name="timestamp"
                 value={timestamp}
-                placeholder="Enter Date and Time"
+                placeholder="Enter timestamp"
                 onChange={(e) => setTimestamp(e.target.value)}
               />
             </div>
