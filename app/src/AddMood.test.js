@@ -1,14 +1,22 @@
-import { fireEvent, prettyDOM, render } from "@testing-library/react";
+import { fireEvent, prettyDOM, render, screen } from "@testing-library/react";
 import { createMemoryHistory } from "history";
-import { Routes, Route, Router, MemoryRouter } from "react-router-dom";
+import { Routes, Route, MemoryRouter } from "react-router-dom";
 
 import AddMood from "./AddMood";
+//testing if app component exists and renders
+//screen.debug will show us the result of the redner()call
+describe("AddMood", () => {
+  test("renders AddMood component", () => {
+    render(<AddMood />);
+    screen.debug();
+  });
+});
 
 //tests for input and placeholders in addmood form exists
 describe("<AddMood />", () => {
   test("renders form inputs correctly", () => {
     const history = createMemoryHistory();
-    const { getByPlaceholderText, getByLabelText } = render(
+    const { getByPlaceholderText, getByLabelText, getByText } = render(
       <MemoryRouter history={history}>
         <Routes>
           <Route element={<AddMood />} />
@@ -16,7 +24,7 @@ describe("<AddMood />", () => {
       </MemoryRouter>,
     );
 
-    const timestampInput = getByLabelText("Timestamp");
+    const timestampInput = getByPlaceholderText("Timestamp");
     const currentMoodInput = getByLabelText("Wonderful");
     const noteInput = getByPlaceholderText("Add notes");
     const photoInput = getByPlaceholderText("Insert url link of photo");
@@ -31,9 +39,20 @@ describe("<AddMood />", () => {
   //test for submit functionality
   test("Submit button works", () => {
     //setup testing
-    const { getByPlaceholderText, getByLabelText, getByRole, container } =
-      render(<AddMood />);
-    const timestampInput = getByLabelText("Timestamp");
+    const {
+      getByPlaceholderText,
+      getByLabelText,
+      getByText,
+      getByRole,
+      container,
+    } = render(
+      <MemoryRouter>
+        <Routes>
+          <Route element={<AddMood />} />
+        </Routes>
+      </MemoryRouter>,
+    );
+    const timestampInput = getByPlaceholderText("Enter timestamp");
     const currentMoodInput = getByLabelText("Wonderful");
     const noteInput = getByPlaceholderText("Add notes");
     const photoInput = getByPlaceholderText("Insert url link of photo");
