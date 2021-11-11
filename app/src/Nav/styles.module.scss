@@ -5,21 +5,22 @@
   top: 0;
   width: 100%;
   margin: -8px;
+  height: 6%;
  
 a, a[class="active"], .navh3 {
   float: right;
   display: inline;
-  font-size: 1.5vw;
-  padding: 5px;
+  font-size: 1.5vh;
   color: #fff;
   text-decoration: none;
-  margin: 5px;
-  margin-top: 3vh;
+  margin: 3px;
+  margin-top: 14px;
   }
   
   .navh3 {
     float: left;
-    font-size: 4vh;
+    margin-top: 10px;
+    font-size: 3vh;
   }
   /* If the screen size is 601px or more, set the font-size of <div> to 80px */
 @media only screen and (min-width: 601px) {
