@@ -7,7 +7,6 @@ import AddMood from "../AddMood";
 import LatestResult from "../LatestResult";
 import Main from "../Main";
 import MoodHistory from "../MoodHistory";
-// import Tasks from "../Tasks";
 import useApi from "../auth/useApi";
 import useAuth0 from "../auth/useAuth0";
 
