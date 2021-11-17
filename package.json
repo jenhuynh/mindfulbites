@@ -25,7 +25,7 @@
     "prettier": "prettier --write .",
     "psql": "docker-compose exec -u postgres db ash -c 'psql ${POSTGRES_DB}'",
     "server:start": "cd server && npm start",
-    "start": "run-p db:start server:start app:start react-scripts start",
+    "start":"run-p db:start server:start app:start",
     "test": "react-scripts test",
     "stop": "run-s db:stop"
   },
