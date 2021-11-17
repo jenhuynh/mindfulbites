@@ -74,7 +74,7 @@ npm start
  <p><b>Bio:</b> Dylan Miles is a high school student at Oakridge High School. His school social worker recommended to use Mindful Bites to track his moods to understand his triggers more of when they tend to feel more anxious during the day.</p>
 
  <img src="app/images/diana_kim.jpg" >
- <p>Diana Kim</p>
+ <p><b>Diana Kim</b></p>
 <p><b>Email: </b>dianalinkim@gmail.com</p>
 <p><b>Password: </b>>y8W6J(S</p>
 <p>Date of Birth: November 8, 1991</p>
